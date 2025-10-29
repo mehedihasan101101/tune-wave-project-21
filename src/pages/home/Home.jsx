@@ -1,10 +1,12 @@
+import HeroSection from "../../components/herosection/HeroSection";
 
 
 const Home = () => {
     return (
-        <div>
-            <h1>Home Page</h1>
-        </div>
+
+        <header className="container m-auto py-10">
+            <HeroSection></HeroSection>
+        </header>
     );
 };
 

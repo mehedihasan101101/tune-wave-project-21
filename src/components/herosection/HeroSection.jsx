@@ -3,12 +3,12 @@ import ImgHero from "../../assets/ImgHero.jpg"
 
 const HeroSection = () => {
     return (
-        <div className="flex gap-2 items-center">
-            <div className="py-10 px-5 w-2/5">
-                <img className="w-[599px]  rounded-2xl" src={ImgHero} alt="" srcset="" />
+        <div className="flex lg:gap-6 gap-2 lg:flex-row flex-col items-center px-3">
+            <div className="lg:py-10  lg:w-2/5">
+                <img className="lg:w-[599px]  rounded-2xl" src={ImgHero} alt="" srcset="" />
             </div>
-            <div className="w-3/5 space-y-5">
-                <h1 className=" font-bold text-5xl">
+            <div className="lg:w-3/5 space-y-5">
+                <h1 className=" font-bold md:text-5xl text-3xl">
                     <span>
                         Join TuneWave.
                     </span>

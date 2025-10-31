@@ -28,7 +28,7 @@ const NavBar = () => {
     }
     return (
         // Main navigation bar
-        <nav className={`lg:py-3 py-2  md:px-2   flex flex-col items-center bg-navBar`}>
+        <nav className={`lg:py-3 py-2  px-3   flex flex-col items-center bg-navBar`}>
 
             <div className="container  flex justify-between items-center ">
                 {/* Main Icon */}

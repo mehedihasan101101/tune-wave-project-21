@@ -1,0 +1,822 @@
+{
+    "songs": [
+        {
+            "id": "lp001",
+            "title": "In the End",
+            "artist": "Linkin Park",
+            "album": "Hybrid Theory",
+            "genre": "Rock",
+            "releaseYear": 2000,
+            "youtubeLink": "https://www.youtube.com/watch?v=eVTXPUF4Oz4",
+            "coverImage": "https://i.ytimg.com/vi/eVTXPUF4Oz4/maxresdefault.jpg",
+            "duration": "3:36",
+            "tags": [
+                "classic",
+                "rap-rock"
+            ],
+            "isTrending": true,
+            "isNewRelease": false
+        },
+        {
+            "id": "lp002",
+            "title": "Numb",
+            "artist": "Linkin Park",
+            "album": "Meteora",
+            "genre": "Rock",
+            "releaseYear": 2003,
+            "youtubeLink": "https://www.youtube.com/watch?v=kXYiU_JCYtU",
+            "coverImage": "https://i.ytimg.com/vi/kXYiU_JCYtU/maxresdefault.jpg",
+            "duration": "3:07",
+            "tags": [
+                "emotional",
+                "anthem"
+            ],
+            "isTrending": true,
+            "isNewRelease": false
+        },
+        {
+            "id": "lp003",
+            "title": "Lost",
+            "artist": "Linkin Park",
+            "album": "Meteora | 20",
+            "genre": "Rock",
+            "releaseYear": 2023,
+            "youtubeLink": "https://www.youtube.com/watch?v=7NK_JOkuSVY",
+            "coverImage": "https://i.ytimg.com/vi/7NK_JOkuSVY/maxresdefault.jpg",
+            "duration": "2:47",
+            "tags": [
+                "modern",
+                "rock"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "lp004",
+            "title": "Over Each Other",
+            "artist": "Linkin Park",
+            "album": "From Zero",
+            "genre": "Rock",
+            "releaseYear": 2024,
+            "youtubeLink": "https://www.youtube.com/watch?v=fSHoePrnmMw",
+            "coverImage": "https://i.ytimg.com/vi/fSHoePrnmMw/maxresdefault.jpg",
+            "duration": "3:15",
+            "tags": [
+                "new era",
+                "rock"
+            ],
+            "isTrending": true,
+            "isNewRelease": true
+        },
+        {
+            "id": "lp005",
+            "title": "My December",
+            "artist": "Linkin Park",
+            "album": "From Zero",
+            "genre": "Rock",
+            "releaseYear": 2024,
+            "youtubeLink": "https://www.youtube.com/watch?v=9DCdCoQ49u8&list=RD9DCdCoQ49u8&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/9DCdCoQ49u8/hqdefault.jpg",
+            "duration": "4:23",
+            "tags": [
+                "anthem",
+                "modern"
+            ],
+            "isTrending": true,
+            "isNewRelease": true
+        },
+        {
+            "id": "lp006",
+            "title": "Two Faced",
+            "artist": "Linkin Park",
+            "album": "From Zero",
+            "genre": "Rock",
+            "releaseYear": 2024,
+            "youtubeLink": "https://www.youtube.com/watch?v=kivUsDGWojU",
+            "coverImage": "https://i.ytimg.com/vi/kivUsDGWojU/maxresdefault.jpg",
+            "duration": "3:05",
+            "tags": [
+                "new",
+                "experiment"
+            ],
+            "isTrending": false,
+            "isNewRelease": true
+        },
+        {
+            "id": "lp007",
+            "title": "Friendly Fire",
+            "artist": "Linkin Park",
+            "album": "From Zero",
+            "genre": "Rock",
+            "releaseYear": 2024,
+            "youtubeLink": "https://www.youtube.com/watch?v=HMluqSGag5E",
+            "coverImage": "https://i.ytimg.com/vi/HMluqSGag5E/maxresdefault.jpg",
+            "duration": "3:22",
+            "tags": [
+                "emotive",
+                "rock"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "lp008",
+            "title": "Nobody Can Save Me",
+            "artist": "Linkin Park",
+            "album": "From Zero",
+            "genre": "Rock",
+            "releaseYear": 2024,
+            "youtubeLink": "https://www.youtube.com/watch?v=FY9v147BZuE&list=RDyZIummTz9mM&index=4",
+            "coverImage": "https://i.ytimg.com/vi/yZIummTz9mM/maxresdefault.jpg",
+            "duration": "3:45",
+            "tags": [
+                "dark",
+                "modern"
+            ],
+            "isTrending": true,
+            "isNewRelease": true
+        },
+        {
+            "id": "cas001",
+            "title": "Apocalypse",
+            "artist": "Cigarettes After Sex",
+            "album": "Cigarettes After Sex",
+            "genre": "Ambient",
+            "releaseYear": 2017,
+            "youtubeLink": "https://www.youtube.com/watch?v=sElE_BfQ67s",
+            "coverImage": "https://i.ytimg.com/vi/sElE_BfQ67s/maxresdefault.jpg",
+            "duration": "4:50",
+            "tags": [
+                "dreamy",
+                "romantic"
+            ],
+            "isTrending": true,
+            "isNewRelease": false
+        },
+        {
+            "id": "cas002",
+            "title": "K.",
+            "artist": "Cigarettes After Sex",
+            "album": "Cigarettes After Sex",
+            "genre": "Ambient",
+            "releaseYear": 2016,
+            "youtubeLink": "https://www.youtube.com/watch?v=L4sbDxR22z4",
+            "coverImage": "https://i.ytimg.com/vi/L4sbDxR22z4/maxresdefault.jpg",
+            "duration": "5:18",
+            "tags": [
+                "soft",
+                "moody"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "cas003",
+            "title": "Nothing’s Gonna Hurt You Baby",
+            "artist": "Cigarettes After Sex",
+            "album": "I.",
+            "genre": "Ambient",
+            "releaseYear": 2012,
+            "youtubeLink": "https://www.youtube.com/watch?v=QI8VrXkffcg&list=RDQI8VrXkffcg&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/L4sbDxR22z4/maxresdefault.jpg",
+            "duration": "4:06",
+            "tags": [
+                "soft",
+                "timeless"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "cas004",
+            "title": "Sweet",
+            "artist": "Cigarettes After Sex",
+            "album": "Cigarettes After Sex",
+            "genre": "Ambient",
+            "releaseYear": 2017,
+            "youtubeLink": "https://www.youtube.com/watch?v=pZ31pyTZdh0&list=RDpZ31pyTZdh0&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/Tsmi1jY_vwE/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLB8D3I53EU0NfF8SaJVHTkMwXY8zg&quot",
+            "duration": "3:25",
+            "tags": [
+                "gentle",
+                "loving"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "cas005",
+            "title": "Each Time You Fall In Love",
+            "artist": "Cigarettes After Sex",
+            "album": "Cigarettes After Sex",
+            "genre": "Ambient",
+            "releaseYear": 2019,
+            "youtubeLink": "https://www.youtube.com/watch?v=7IBfhvRfotc",
+            "coverImage": "https://i.ytimg.com/vi/7IBfhvRfotc/maxresdefault.jpg",
+            "duration": "4:12",
+            "tags": [
+                "romantic",
+                "smooth"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "cas006",
+            "title": "I’m a Firefighter",
+            "artist": "Cigarettes After Sex",
+            "album": "Cry",
+            "genre": "Ambient",
+            "releaseYear": 2023,
+            "youtubeLink": "https://www.youtube.com/watch?v=fN3QeFkHKYw",
+            "coverImage": "https://i.ytimg.com/vi/fN3QeFkHKYw/maxresdefault.jpg",
+            "duration": "3:50",
+            "tags": [
+                "new",
+                "ambient"
+            ],
+            "isTrending": false,
+            "isNewRelease": true
+        },
+        {
+            "id": "cas007",
+            "title": "Neon Moon (Cover)",
+            "artist": "Cigarettes After Sex",
+            "album": "Live Session",
+            "genre": "Ambient",
+            "releaseYear": 2021,
+            "youtubeLink": "https://www.youtube.com/watch?v=BrzXW140-HM&list=RDBrzXW140-HM&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/BrzXW140-HM/maxresdefault.jpg",
+            "duration": "3:44",
+            "tags": [
+                "cover",
+                "soft"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "cas008",
+            "title": "Heavenly",
+            "artist": "Cigarettes After Sex",
+            "album": "Cry",
+            "genre": "Ambient",
+            "releaseYear": 2023,
+            "youtubeLink": "https://www.youtube.com/watch?v=s1QCL9AGbO0&list=RDs1QCL9AGbO0&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/s1QCL9AGbO0/maxresdefault.jpg",
+            "duration": "4:05",
+            "tags": [
+                "emotional",
+                "new"
+            ],
+            "isTrending": true,
+            "isNewRelease": true
+        },
+        {
+            "id": "omm001",
+            "title": "Little Talks",
+            "artist": "Of Monsters and Men",
+            "album": "My Head Is an Animal",
+            "genre": "Indie",
+            "releaseYear": 2011,
+            "youtubeLink": "https://www.youtube.com/watch?v=ghb6eDopW8I",
+            "coverImage": "https://i.ytimg.com/vi/ghb6eDopW8I/maxresdefault.jpg",
+            "duration": "4:27",
+            "tags": [
+                "folk",
+                "anthem"
+            ],
+            "isTrending": true,
+            "isNewRelease": false
+        },
+        {
+            "id": "omm002",
+            "title": "Empire",
+            "artist": "Of Monsters and Men",
+            "album": "My Head Is an Animal",
+            "genre": "Indie",
+            "releaseYear": 2013,
+            "youtubeLink": "https://www.youtube.com/watch?v=H2lzxGcbz-g",
+            "coverImage": "https://i.ytimg.com/vi/H2lzxGcbz-g/maxresdefault.jpg",
+            "duration": "3:20",
+            "tags": [
+                "uplifting",
+                "folk-pop"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "omm003",
+            "title": "Dirty Paws",
+            "artist": "Of Monsters and Men",
+            "album": "My Head Is an Animal",
+            "genre": "Indie",
+            "releaseYear": 2011,
+            "youtubeLink": "https://www.youtube.com/watch?v=mCHUw7ACS8o&list=RDmCHUw7ACS8o&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/mCHUw7ACS8o/maxresdefault.jpg",
+            "duration": "4:41",
+            "tags": [
+                "epic",
+                "story"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "omm004",
+            "title": "King and Lionheart",
+            "artist": "Of Monsters and Men",
+            "album": "My Head Is an Animal",
+            "genre": "Indie",
+            "releaseYear": 2012,
+            "youtubeLink": "https://www.youtube.com/watch?v=A76a_LNIYwE&list=RDA76a_LNIYwE&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/A76a_LNIYwE/maxresdefault.jpg",
+            "duration": "4:35",
+            "tags": [
+                "soaring",
+                "melodic"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "omm005",
+            "title": "Yellow Light ",
+            "artist": "Of Monsters and Men",
+            "album": "Fever Dream",
+            "genre": "Indie",
+            "releaseYear": 2023,
+            "youtubeLink": "https://www.youtube.com/watch?v=aBlKPLeLU_s",
+            "coverImage": "https://i.ytimg.com/vi/aBlKPLeLU_s/maxresdefault.jpg",
+            "duration": "4:47",
+            "tags": [
+                "new",
+                "ethereal"
+            ],
+            "isTrending": false,
+            "isNewRelease": true
+        },
+      
+        {
+            "id": "omm006",
+            "title": "Alligator",
+            "artist": "Of Monsters and Men",
+            "album": "Fever Dream",
+            "genre": "Indie",
+            "releaseYear": 2023,
+            "youtubeLink": "https://www.youtube.com/watch?v=ThrK0Re1lJs&list=RDThrK0Re1lJs&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/ThrK0Re1lJs/maxresdefault.jpg",
+            "duration": "3:30",
+            "tags": [
+                "driving",
+                "modern"
+            ],
+            "isTrending": true,
+            "isNewRelease": true
+        },
+        {
+            "id": "omm007",
+            "title": "Love Love Love",
+            "artist": "Of Monsters and Men",
+            "album": "Fever Dream",
+            "genre": "Indie",
+            "releaseYear": 2024,
+            "youtubeLink": "https://www.youtube.com/watch?v=beiPP_MGz6I&list=RDbeiPP_MGz6I&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/beiPP_MGz6I/maxresdefault.jpg",
+            "duration": "3:55",
+            "tags": [
+                "fresh",
+                "forest"
+            ],
+            "isTrending": true,
+            "isNewRelease": true
+        },
+        {
+            "id": "omm008",
+            "title": "Television Love",
+            "artist": "Of Monsters and Men",
+            "album": "Fever Dream",
+            "genre": "Indie",
+            "releaseYear": 2025,
+            "youtubeLink": "https://www.youtube.com/watch?v=TJKxdPzoeEs&list=RDTJKxdPzoeEs&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/TJKxdPzoeEs/maxresdefault.jpg",
+            "duration": "3:25",
+            "tags": [
+                "fresh",
+                "anthem"
+            ],
+            "isTrending": true,
+            "isNewRelease": true
+        },
+        {
+            "id": "bm001",
+            "title": "Breathe (2 AM)",
+            "artist": "Blue October",
+            "album": "Foiled",
+            "genre": "Alternative",
+            "releaseYear": 2006,
+            "youtubeLink": "https://www.youtube.com/results?search_query=Breathe+(2+AM)",
+            "coverImage": "https://i.ytimg.com/vi/FcvXr-9XtgA/maxresdefault.jpg",
+            "duration": "4:20",
+            "tags": [
+                "emotional",
+                "melancholy"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "bm002",
+            "title": "Hate Me",
+            "artist": "Blue October",
+            "album": "Foiled",
+            "genre": "Alternative",
+            "releaseYear": 2006,
+            "youtubeLink": "https://www.youtube.com/watch?v=dDxgSvJINlU&list=RDdDxgSvJINlU&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/dDxgSvJINlU/maxresdefault.jpg",
+            "duration": "3:49",
+            "tags": [
+                "raw",
+                "heartbreak"
+            ],
+            "isTrending": true,
+            "isNewRelease": false
+        },
+        {
+            "id": "bm003",
+            "title": "Into the Ocean",
+            "artist": "Blue October",
+            "album": "History for Sale",
+            "genre": "Alternative",
+            "releaseYear": 2003,
+            "youtubeLink": "https://www.youtube.com/watch?v=ZES3nJQYJok&list=RDZES3nJQYJok&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/ZES3nJQYJok/maxresdefault.jpg",
+            "duration": "4:04",
+            "tags": [
+                "drown",
+                "heart"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "bm004",
+            "title": "Say It",
+            "artist": "Blue October",
+            "album": "Approaching Normal",
+            "genre": "Alternative",
+            "releaseYear": 2009,
+            "youtubeLink": "https://www.youtube.com/watch?v=GbLP8jNdR9k&list=RDGbLP8jNdR9k&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/GbLP8jNdR9k/maxresdefault.jpg",
+            "duration": "3:33",
+            "tags": [
+                "plea",
+                "guitar"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "bm005",
+            "title": "I Hope You’re Happy",
+            "artist": "Blue October",
+            "album": "This Is What I Live For",
+            "genre": "Alternative",
+            "releaseYear": 2018,
+            "youtubeLink": "https://www.youtube.com/watch?v=FwZvuV79jeY&list=RDFwZvuV79jeY&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/FwZvuV79jeY/maxresdefault.jpg",
+            "duration": "4:45",
+            "tags": [
+                "uplift",
+                "growth"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "bm006",
+            "title": "The Worry List",
+            "artist": "Blue October",
+            "album": "This Is What I Live For",
+            "genre": "Alternative",
+            "releaseYear": 2018,
+            "youtubeLink": "https://www.youtube.com/watch?v=LXoKc6Ep78k&list=RDLXoKc6Ep78k&start_radio=1",
+            "coverImage": "hhttps://i.ytimg.com/vi/LXoKc6Ep78k/maxresdefault.jpg",
+            "duration": "3:50",
+            "tags": [
+                "anxiety",
+                "honest"
+            ],
+            "isTrending": true,
+            "isNewRelease": false
+        },
+        {
+            "id": "bm007",
+            "title": "Candy",
+            "artist": "Blue October",
+            "album": "Foiled",
+            "genre": "Alternative",
+            "releaseYear": 2006,
+            "youtubeLink": "https://www.youtube.com/watch?v=3D-2DPLWvpE&list=RD3D-2DPLWvpE&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/3D-2DPLWvpE/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEcgVChlMA8=&rs=AOn4CLByXNsdaB5jK8gKODXPocMgF9uG0g",
+            "duration": "4:23",
+            "tags": [
+                "addiction",
+                "love"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "bm008",
+            "title": "Sway",
+            "artist": "Blue October",
+            "album": "This Is What I Live For",
+            "genre": "Alternative",
+            "releaseYear": 2018,
+            "youtubeLink": "https://www.youtube.com/watch?v=AO_Iy5f0whc&list=RDAO_Iy5f0whc&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/AO_Iy5f0whc/maxresdefault.jpg",
+            "duration": "4:54",
+            "tags": [
+                "late night",
+                "reflection"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "edm001",
+            "title": "Strobe",
+            "artist": "deadmau5",
+            "album": "For Lack of a Better Name",
+            "genre": "Electronic",
+            "releaseYear": 2009,
+            "youtubeLink": "https://www.youtube.com/watch?v=tvlH7lAcwaA&list=RDtvlH7lAcwaA&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/tvlH7lAcwaA/maxresdefault.jpg",
+            "duration": "10:33",
+            "tags": [
+                "progressive",
+                "epic"
+            ],
+            "isTrending": true,
+            "isNewRelease": false
+        },
+        {
+            "id": "edm002",
+            "title": "I Remember",
+            "artist": "deadmau5 & Kaskade",
+            "album": "For Lack of a Better Name",
+            "genre": "Electronic",
+            "releaseYear": 2008,
+            "youtubeLink": "https://www.youtube.com/watch?v=zK1mLIeXwsQ",
+            "coverImage": "https://i.ytimg.com/vi/zK1mLIeXwsQ/hqdefault.jpg",
+            "duration": "3:14",
+            "tags": [
+                "dance",
+                "classic"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "edm003",
+            "title": "Raise Your Weapon",
+            "artist": "deadmau5",
+            "album": "4×4=12",
+            "genre": "Electronic",
+            "releaseYear": 2010,
+            "youtubeLink": "https://www.youtube.com/watch?v=YnwfTHpnGLY&list=RDYnwfTHpnGLY&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/YnwfTHpnGLY/maxresdefault.jpg",
+            "duration": "6:27",
+            "tags": [
+                "progressive",
+                "bass"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "edm004",
+            "title": "Some Chords",
+            "artist": "deadmau5",
+            "album": "4×4=12",
+            "genre": "Electronic",
+            "releaseYear": 2010,
+            "youtubeLink": "https://www.youtube.com/watch?v=MEQMkzjcLEA&list=RDMEQMkzjcLEA&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/MEQMkzjcLEA/maxresdefault.jpg",
+            "duration": "7:17",
+            "tags": [
+                "instrumental",
+                "epic"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "edm005",
+            "title": "Raise Your Weapon (132 Edit)",
+            "artist": "deadmau5",
+            "album": "4×4=12",
+            "genre": "Electronic",
+            "releaseYear": 2010,
+            "youtubeLink": "https://www.youtube.com/watch?v=BlbtiAu7-eQ&list=RDBlbtiAu7-eQ&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/BlbtiAu7-eQ/maxresdefault.jpg",
+            "duration": "5:50",
+            "tags": [
+                "edit",
+                "club"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "edm006",
+            "title": "Imaginary Friends",
+            "artist": "deadmau5",
+            "album": "For Lack of a Better Name",
+            "genre": "Electronic",
+            "releaseYear": 2009,
+            "youtubeLink": "https://www.youtube.com/watch?v=RNvvYOx3XmE&list=RDRNvvYOx3XmE&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/RNvvYOx3XmE/maxresdefault.jpg",
+            "duration": "8:00",
+            "tags": [
+                "spacey",
+                "epic"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "edm007",
+            "title": "Aural Psynapse",
+            "artist": "deadmau5",
+            "album": "5 Years of mau5",
+            "genre": "Electronic",
+            "releaseYear": 2014,
+            "youtubeLink": "https://www.youtube.com/watch?v=3l5N2pabiME&list=RD3l5N2pabiME&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/3l5N2pabiME/maxresdefault.jpg",
+            "duration": "8:15",
+            "tags": [
+                "uplifting",
+                "classic"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "edm008",
+            "title": "Clockwork (Deadmau5 Remix)",
+            "artist": "deadmau5",
+            "album": "Single",
+            "genre": "Electronic",
+            "releaseYear": 2022,
+            "youtubeLink": "https://www.youtube.com/watch?v=78hYZY2c744&list=RD78hYZY2c744&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/78hYZY2c744/maxresdefault.jpg",
+            "duration": "6:02",
+            "tags": [
+                "remix",
+                "groove"
+            ],
+            "isTrending": true,
+            "isNewRelease": false
+        },
+ 
+        {
+            "id": "rb001",
+            "title": "Take Me to Church",
+            "artist": "Hozier",
+            "album": "Hozier",
+            "genre": "Soul",
+            "releaseYear": 2013,
+            "youtubeLink": "https://www.youtube.com/watch?v=PVjiKRfKpPI&list=RDPVjiKRfKpPI&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/PVjiKRfKpPI/maxresdefault.jpg",
+            "duration": "4:02",
+            "tags": [
+                "powerful",
+                "soul"
+            ],
+            "isTrending": true,
+            "isNewRelease": false
+        },
+        {
+            "id": "rb002",
+            "title": "Someone New",
+            "artist": "Hozier",
+            "album": "Hozier",
+            "genre": "Soul",
+            "releaseYear": 2014,
+            "youtubeLink": "https://www.youtube.com/watch?v=bPJSsAr2iu0&list=RDbPJSsAr2iu0&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/bPJSsAr2iu0/maxresdefault.jpg",
+            "duration": "3:56",
+            "tags": [
+                "romantic",
+                "soft"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "rb003",
+            "title": "Sleepwalking ",
+            "artist": "Hozier",
+            "album": "Live Sessions",
+            "genre": "Soul",
+            "releaseYear": 2015,
+            "youtubeLink": "https://www.youtube.com/watch?v=B2STtOkaUIs&list=RDB2STtOkaUIs&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/B2STtOkaUIs/maxresdefault.jpg",
+            "duration": "4:20",
+            "tags": [
+                "live",
+                "raw"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "rb004",
+            "title": "From Eden",
+            "artist": "Hozier",
+            "album": "Hozier",
+            "genre": "Soul",
+            "releaseYear": 2014,
+            "youtubeLink": "https://www.youtube.com/watch?v=phZ1QcFsPvA&list=RDphZ1QcFsPvA&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/phZ1QcFsPvA/maxresdefault.jpg",
+            "duration": "4:01",
+            "tags": [
+                "poetic",
+                "alternative"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "rb005",
+            "title": "Movement",
+            "artist": "Hozier",
+            "album": "Wasteland, Baby!",
+            "genre": "Soul",
+            "releaseYear": 2019,
+            "youtubeLink": "https://www.youtube.com/watch?v=OSye8OO5TkM&list=RDOSye8OO5TkM&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/OSye8OO5TkM/maxresdefault.jpg",
+            "duration": "2:59",
+            "tags": [
+                "groove",
+                "dark"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "rb006",
+            "title": "Almost (Sweet Music)",
+            "artist": "Hozier",
+            "album": "Wasteland, Baby!",
+            "genre": "Soul",
+            "releaseYear": 2020,
+            "youtubeLink": "https://www.youtube.com/watch?v=JJ9IX4zgyLs&list=RDJJ9IX4zgyLs&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/JJ9IX4zgyLs/maxresdefault.jpg",
+            "duration": "4:03",
+            "tags": [
+                "jazz",
+                "soul"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        },
+        {
+            "id": "rb007",
+            "title": "No Plan",
+            "artist": "Hozier",
+            "album": "Single",
+            "genre": "Soul",
+            "releaseYear": 2024,
+            "youtubeLink": "https://www.youtube.com/watch?v=gXq_J29V5Io&list=RDgXq_J29V5Io&start_radio=1",
+            "coverImage": "https://i.ytimg.com/vi/gXq_J29V5Io/maxresdefault.jpg",
+            "duration": "3:50",
+            "tags": [
+                "new",
+                "mellow"
+            ],
+            "isTrending": true,
+            "isNewRelease": true
+        },
+        {
+            "id": "rb008",
+            "title": "Nina Cried Power",
+            "artist": "Hozier",
+            "album": "Live at the Woods",
+            "genre": "Soul",
+            "releaseYear": 2020,
+            "youtubeLink": "https://www.youtube.com/watch?v=j2YgDua2gpk",
+            "coverImage": "https://i.ytimg.com/vi/j2YgDua2gpk/maxresdefault.jpg",
+            "duration": "3:10",
+            "tags": [
+                "live",
+                "energetic"
+            ],
+            "isTrending": false,
+            "isNewRelease": false
+        }
+    ]
+}

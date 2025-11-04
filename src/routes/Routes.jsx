@@ -1,6 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router";
 import Root from "../layout/Root"
 import Home from "../pages/home/Home";
+import handleApiData from "../utilities/handleApiData";
 
 
 const Routes = createBrowserRouter([
@@ -15,6 +16,7 @@ const Routes = createBrowserRouter([
 
             {
                 path: "home",
+                loader: handleApiData,
                 element: <Home></Home>
             }
         ]

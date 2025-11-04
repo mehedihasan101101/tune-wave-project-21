@@ -30,7 +30,7 @@ const NavBar = () => {
         // Main navigation bar
         <nav className={`lg:py-3 py-2  px-3   flex flex-col items-center bg-navBar`}>
 
-            <div className="container  flex justify-between items-center ">
+            <div className="container  flex justify-between items-center">
                 {/* Main Icon */}
                 {/* Mobile Menu  Icon */}
                 <div className="lg:hidden">
@@ -53,7 +53,7 @@ const NavBar = () => {
                     <ul className="lg:flex relative   gap-7 lg:mt-0 mt-20 lg:bg-transparent text-[#6b6b6f]">
 
                         {navFields.map((field) => <NavLink key={field.id} to={field.path} className={({ isActive }) => `rounded  px-6 py-2  block ${isActive ? "text-primaryText" :
-                            " hover:text-primaryText transition-colors duration-300 text-white"}`}>{field.name}</NavLink>)}
+                            " hover:[text-shadow:0_0_8px_#26fcea,_0_0_16px_#26fcea,_0_0_24px_#26fcea] transition text-white"}`}>{field.name}</NavLink>)}
                     </ul>
                 </div>
 

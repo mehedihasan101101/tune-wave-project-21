@@ -7,8 +7,8 @@ const HeroSection = () => {
             <div className="lg:py-10  lg:w-2/5">
                 <img className="lg:w-[599px]  rounded-2xl" src={ImgHero} alt="" srcset="" />
             </div>
-            <div className="lg:w-3/5 space-y-5">
-                <h1 className=" font-bold md:text-5xl text-3xl">
+            <div className="lg:w-3/5 lg:space-y-5 space-y-3">
+                <h1 className=" font-bold lg:text-5xl md:text-4xl text-3xl">
                     <span>
                         Join TuneWave.
                     </span>

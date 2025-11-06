@@ -3,8 +3,8 @@ import ImgHero from "../../assets/ImgHero.jpg"
 
 const HeroSection = () => {
     return (
-        <div className="flex lg:gap-6 gap-2 lg:flex-row flex-col items-center px-3">
-            <div className="lg:py-10  lg:w-2/5">
+        <div className="flex lg:gap-6 gap-2 lg:flex-row flex-col items-center ">
+            <div className="lg:py-10 px-0  lg:w-2/5">
                 <img className="lg:w-[599px]  rounded-2xl" src={ImgHero} alt="" srcset="" />
             </div>
             <div className="lg:w-3/5 lg:space-y-5 space-y-3">

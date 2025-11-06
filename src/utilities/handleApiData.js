@@ -5,7 +5,7 @@ export default async function ({ params }) {
     try {
         const response = await fetch(apiPathUrl);
         const allSongs = await response.json()
-        console.log(allSongs)
+        return allSongs;
     }
     catch (error) {
         console.error("Failed to fetch news:", error);

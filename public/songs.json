@@ -357,7 +357,6 @@
             "isTrending": false,
             "isNewRelease": true
         },
-      
         {
             "id": "omm006",
             "title": "Alligator",
@@ -502,7 +501,7 @@
             "genre": "Alternative",
             "releaseYear": 2018,
             "youtubeLink": "https://www.youtube.com/watch?v=LXoKc6Ep78k&list=RDLXoKc6Ep78k&start_radio=1",
-            "coverImage": "hhttps://i.ytimg.com/vi/LXoKc6Ep78k/maxresdefault.jpg",
+            "coverImage": "https://i.ytimg.com/vi/LXoKc6Ep78k/maxresdefault.jpg",
             "duration": "3:50",
             "tags": [
                 "anxiety",
@@ -554,7 +553,7 @@
             "releaseYear": 2009,
             "youtubeLink": "https://www.youtube.com/watch?v=tvlH7lAcwaA&list=RDtvlH7lAcwaA&start_radio=1",
             "coverImage": "https://i.ytimg.com/vi/tvlH7lAcwaA/maxresdefault.jpg",
-            "duration": "10:33",
+            "duration": "5:33",
             "tags": [
                 "progressive",
                 "epic"
@@ -681,7 +680,6 @@
             "isTrending": true,
             "isNewRelease": false
         },
- 
         {
             "id": "rb001",
             "title": "Take Me to Church",

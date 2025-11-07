@@ -11,7 +11,7 @@ const Home = () => {
     console.log(trending15)
     return (
         <>
-            <header className="container m-auto py-10 px-3">
+            <header className="container m-auto lg:py-0 md:py-10 py-5 px-3">
                 <HeroSection></HeroSection>
             </header>
             <section className="container m-auto px-3">

@@ -405,8 +405,8 @@
                 "fresh",
                 "anthem"
             ],
-            "isTrending": true,
-            "isNewRelease": true
+            "isTrending": false,
+            "isNewRelease": false
         },
         {
             "id": "bm001",
@@ -439,7 +439,7 @@
                 "raw",
                 "heartbreak"
             ],
-            "isTrending": true,
+            "isTrending": false,
             "isNewRelease": false
         },
         {

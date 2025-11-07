@@ -1,11 +1,27 @@
 
 
 export default async function ({ params }) {
-    const apiPathUrl = "/songs.json"
+
+    const songsApiPath = "/songs.json"
+    const { category } = params;
+
+    console.log(category)
     try {
-        const response = await fetch(apiPathUrl);
-        const allSongs = await response.json()
-        return allSongs;
+
+        const response = await fetch(songsApiPath);
+        const allSongs = await response.json();
+        const { songs } = allSongs;
+
+
+        if (category && category == "trending") {
+            const trendingMusics = songs.filter(eachSong => eachSong.isTrending);
+            return trendingMusics;
+        }
+        else {
+            return allSongs
+        }
+
+
     }
     catch (error) {
         console.error("Failed to fetch news:", error);

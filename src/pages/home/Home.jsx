@@ -5,6 +5,7 @@ import Trending15 from "../../components/top-15/Trending15";
 
 const Home = () => {
     const { songs } = useLoaderData();
+    console.log(songs)
 
     const trending15 = songs.filter(eachTrendingSong => eachTrendingSong.isTrending);
 

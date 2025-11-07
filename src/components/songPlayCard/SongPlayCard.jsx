@@ -1,29 +1,49 @@
 import { useState } from "react";
 import { FaRegHeart } from "react-icons/fa6";
-import { Link } from "react-router";
+import { Link, NavLink, useParams } from "react-router";
 import { PiGooglePlayLogo } from "react-icons/pi";
+import getYoutubeSongIdFromLink from "../../utilities/getYoutubeSongIdFromLink";
 
 
 
-const Trending15Card = ({ eachTrendingSong, index }) => {
+const Trending15Card = ({ eachTrendingSong, index, routeLink }) => {
+
+    const { category } = useParams();
+
+
+    // Route path used for the SongPlay card component. 
+    // Purpose: allows reusing the same card across different music albums or categories.
+    const songId = getYoutubeSongIdFromLink(eachTrendingSong.youtubeLink);
+
+   
 
     const { title, artist, duration, coverImage } = eachTrendingSong
+    // Since array indexes start at 0, adding 1 ensures the count begins from 1.
     const songIndex = index + 1;
 
+    //state to handle hover effect of each music card
     const [MouseEnter, setMouseEnter] = useState(false)
+
+    // Sets the state to true when the mouse enters a music card.
 
     function MouseEnterHover() {
         setMouseEnter(true)
-        console.log(MouseEnter)
+
     }
+
+    // Sets the state to false when the mouse enters a music card.
     function MouseLeaveHover() {
         setMouseEnter(false)
-        console.log(MouseEnter)
     }
 
 
     return (
-        <Link onMouseEnter={MouseEnterHover} onMouseLeave={MouseLeaveHover} className=" border-b border-gray-600/40 py-3">
+
+        // In this NavLink:
+        // - If `category` is falsy, it uses `routeLink` directly.
+        // - If `category` is truthy, it prefixes the link with `categoryName/routeLink`.
+
+        <NavLink to={`${category ? songId : routeLink}`} onMouseEnter={MouseEnterHover} onMouseLeave={MouseLeaveHover} className=" border-b border-gray-600/40 py-3">
             <div className='flex justify-between items-center'>
                 <div className='flex lg:gap-7 md:gap-5 gap-7 items-center '>
                     <div className='flex lg:w-20'>
@@ -47,7 +67,7 @@ const Trending15Card = ({ eachTrendingSong, index }) => {
                     <FaRegHeart></FaRegHeart>
                 </div>
             </div>
-        </Link >
+        </NavLink >
 
     );
 };

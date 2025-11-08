@@ -1,3 +1,5 @@
+
+// this function generate song id from youtube video link
 export default function (url) {
 
     const regExp = /^.*((youtu\.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?v=)|(&v=))([^#&?]*).*/;

@@ -10,18 +10,16 @@ const Trending15Card = ({ eachTrendingSong, index, routeLink }) => {
 
     const { category } = useParams();
 
-
     // Route path used for the SongPlay card component. 
     // Purpose: allows reusing the same card across different music albums or categories.
     const songId = getYoutubeSongIdFromLink(eachTrendingSong.youtubeLink);
 
     const { pathname } = useLocation();
-    console.log(pathname)
 
 
 
 
-    const { title, artist, duration, coverImage } = eachTrendingSong
+    const { title, artist, duration, coverImage, } = eachTrendingSong
     // Since array indexes start at 0, adding 1 ensures the count begins from 1.
     const songIndex = index + 1;
 
@@ -40,14 +38,11 @@ const Trending15Card = ({ eachTrendingSong, index, routeLink }) => {
         setMouseEnter(false)
     }
 
-
     return (
 
-        // In this NavLink:
-        // - If `category` is falsy, it uses `routeLink` directly.
-        // - If `category` is truthy, it prefixes the link with `categoryName/routeLink`.
 
-        <NavLink to={`/home/${pathname === "/home" ? routeLink : category}/${songId}`} onMouseEnter={MouseEnterHover} onMouseLeave={MouseLeaveHover} className={`border-b border-gray-600/40 py-3`}>
+
+        <NavLink to={`/home/${pathname === "/Home" ? routeLink : category}/${songId}`} onMouseEnter={MouseEnterHover} onMouseLeave={MouseLeaveHover} className={`border-b border-gray-600/40 py-3`}>
 
             {({ isActive }) => (
 

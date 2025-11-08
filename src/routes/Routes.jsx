@@ -2,7 +2,7 @@ import { createBrowserRouter, Navigate } from "react-router";
 import Root from "../layout/Root"
 import Home from "../pages/home/Home";
 import handleApiData from "../utilities/handleApiData";
-import Browse from "../pages/home/Browse";
+import Browse from "../pages/browser/Browse";
 import YoutubePlayer from "../components/youtubePlayer/YoutubePlayer";
 
 

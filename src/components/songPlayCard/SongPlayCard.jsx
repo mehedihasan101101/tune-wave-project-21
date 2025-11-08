@@ -6,7 +6,7 @@ import getYoutubeSongIdFromLink from "../../utilities/getYoutubeSongIdFromLink";
 
 
 
-const Trending15Card = ({ eachTrendingSong, index, routeLink }) => {
+const Trending15Card = ({ eachTrendingSong, index, routeLink, categoryName }) => {
 
     const { category } = useParams();
 
@@ -15,7 +15,6 @@ const Trending15Card = ({ eachTrendingSong, index, routeLink }) => {
     const songId = getYoutubeSongIdFromLink(eachTrendingSong.youtubeLink);
 
     const { pathname } = useLocation();
-
 
 
 
@@ -42,7 +41,7 @@ const Trending15Card = ({ eachTrendingSong, index, routeLink }) => {
 
 
 
-        <NavLink to={`/home/${pathname === "/Home" ? routeLink : category}/${songId}`} onMouseEnter={MouseEnterHover} onMouseLeave={MouseLeaveHover} className={`border-b border-gray-600/40 py-3`}>
+        <NavLink state={categoryName} to={`/home/${pathname === "/Home" ? routeLink : category}/${songId}`} onMouseEnter={MouseEnterHover} onMouseLeave={MouseLeaveHover} className={`border-b border-gray-600/40 py-3`}>
 
             {({ isActive }) => (
 

@@ -28,10 +28,6 @@ const Routes = createBrowserRouter([
                 element: <Browse></Browse>,
                 children: [
                     {
-                        index: true,
-                        element: <Navigate to></Navigate>
-                    },
-                    {
                         path: ":songId",
                         element: <YoutubePlayer></YoutubePlayer>
                     }

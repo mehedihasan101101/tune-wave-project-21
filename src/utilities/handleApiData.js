@@ -16,6 +16,10 @@ export default async function ({ params }) {
             const trendingMusics = songs.filter(eachSong => eachSong.isTrending);
             return trendingMusics;
         }
+        else if (category && category == "newReleases") {
+            const newReleases = songs.filter(eachSong => eachSong.isTrending);
+            return newReleases;
+        }
         else {
             return allSongs
         }

@@ -6,6 +6,7 @@ import Browse from "../pages/home/Browse";
 import YoutubePlayer from "../components/youtubePlayer/YoutubePlayer";
 
 
+
 const Routes = createBrowserRouter([
     {
         path: "",
@@ -26,6 +27,10 @@ const Routes = createBrowserRouter([
                 loader: handleApiData,
                 element: <Browse></Browse>,
                 children: [
+                    {
+                        index: true,
+                        element: <Navigate to></Navigate>
+                    },
                     {
                         path: ":songId",
                         element: <YoutubePlayer></YoutubePlayer>

@@ -14,11 +14,11 @@ const Browse = () => {
 
 
     return (
-        <div className='container grid-cols-12 m-auto px-3 grid'>
+        <div className='container grid-cols-12 m-auto px-3 grid gap-10'>
             <div className='col-span-6'>
                 <Outlet context={songId}></Outlet>
             </div>
-            <div className='col-span-6'>
+            <div className='col-span-6 grid'>
                 {trendingSongs.map((eachTrendingSong, index) => <SongPlayCard index={index} eachTrendingSong={eachTrendingSong} ></SongPlayCard>)}
             </div>
         </div>

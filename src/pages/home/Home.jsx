@@ -5,11 +5,11 @@ import Trending15 from "../../components/top-15/Trending15";
 
 const Home = () => {
     const { songs } = useLoaderData();
-    console.log(songs)
+
 
     const trending15 = songs.filter(eachTrendingSong => eachTrendingSong.isTrending);
 
-    console.log(trending15)
+  
     return (
         <>
             <header className="container m-auto lg:py-0 md:py-10 py-5 px-3">

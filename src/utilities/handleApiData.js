@@ -5,6 +5,8 @@ export default async function ({ params }) {
     const songsApiPath = "/songs.json"
     const { category } = params;
 
+    console.log(category)
+
     try {
 
         const response = await fetch(songsApiPath);
@@ -17,7 +19,7 @@ export default async function ({ params }) {
             return trendingMusics;
         }
         else if (category && category == "newReleases") {
-            const newReleases = songs.filter(eachSong => eachSong.isTrending);
+            const newReleases = songs.filter(eachSong => eachSong.isNewRelease);
             return newReleases;
         }
         else {

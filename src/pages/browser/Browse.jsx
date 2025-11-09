@@ -21,11 +21,13 @@ const Browse = () => {
 
 
 
-
+    console.log(songId)
     const allSongs = useLoaderData();
 
+    console.log(allSongs)
     const currentSong = UseSongById(allSongs) //this custom hook find the current played song 
 
+    console.log(currentSong)
     const { coverImage, title, artist, album, genre, duration, releaseYear } = currentSong;
 
     return (
@@ -38,9 +40,9 @@ const Browse = () => {
                     <Outlet context={songId}></Outlet>
 
                     <div className='md:grid flex  grid-cols-7 items-center gap-5 mt-5  md:p-2 rounded  '>
-                    
-                            <img className='rounded  md:h-full md:w-auto w-1/2  col-span-2' src={coverImage} alt="" />
-                  
+
+                        <img className='rounded  md:h-full md:w-auto w-1/2  col-span-2' src={coverImage} alt="" />
+
                         <div className=' col-span-5 md:w-auto w-1/2  gap-15 grid-cols-9 space-y-2'>
                             <div className='md:flex gap-15'>
                                 <div>

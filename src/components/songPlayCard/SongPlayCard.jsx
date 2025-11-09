@@ -18,7 +18,7 @@ const Trending15Card = ({ eachTrendingSong, index, routeLink, categoryName }) =>
 
 
 
-    const { title, artist, duration, coverImage, } = eachTrendingSong
+    const { title, artist, duration, coverImage} = eachTrendingSong;
     // Since array indexes start at 0, adding 1 ensures the count begins from 1.
     const songIndex = index + 1;
 

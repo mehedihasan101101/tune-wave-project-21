@@ -37,10 +37,10 @@ const Browse = () => {
                 <div className='col-span-6 '>
                     <Outlet context={songId}></Outlet>
 
-                    <div className='md:grid flex justify-between grid-cols-7 items-center gap-5 mt-5  md:p-2 rounded  '>
-                        <div className='md:h-full md:w-auto w-1/2  col-span-2 '>
-                            <img className='rounded ' src={coverImage} alt="" />
-                        </div>
+                    <div className='md:grid flex  grid-cols-7 items-center gap-5 mt-5  md:p-2 rounded  '>
+                    
+                            <img className='rounded  md:h-full md:w-auto w-1/2  col-span-2' src={coverImage} alt="" />
+                  
                         <div className=' col-span-5 md:w-auto w-1/2  gap-15 grid-cols-9 space-y-2'>
                             <div className='md:flex gap-15'>
                                 <div>
@@ -60,7 +60,7 @@ const Browse = () => {
 
                     </div>
                 </div>
-                <div className='col-span-6 grid overflow-y-scroll h-screen px-5 md:pt-0 pt-5'>
+                <div className='col-span-6 grid lg:overflow-y-scroll lg:h-screen px-5 lg:pt-0 md:pt-5 pt-5'>
                     {allSongs.map((eachTrendingSong, index) => <SongPlayCard index={index} eachTrendingSong={eachTrendingSong} ></SongPlayCard>)}
                 </div>
             </div>

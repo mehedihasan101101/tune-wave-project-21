@@ -18,7 +18,7 @@ const Trending15Card = ({ eachTrendingSong, index, routeLink, categoryName }) =>
 
 
 
-    const { title, artist, duration, coverImage} = eachTrendingSong;
+    const { title, artist, duration, coverImage } = eachTrendingSong;
     // Since array indexes start at 0, adding 1 ensures the count begins from 1.
     const songIndex = index + 1;
 
@@ -47,7 +47,7 @@ const Trending15Card = ({ eachTrendingSong, index, routeLink, categoryName }) =>
 
                 <div className='flex justify-between items-center'>
                     <div className={`flex ${category ? "lg:gap-0" : "lg:gap-2"} md:gap-5 gap-7 items-center `}>
-                        <div className='flex lg:w-20'>
+                        <div className='flex w-10 lg:w-20'>
                             <h1 className={`${category ? "lg:text-2xl" : "lg:text-5xl"} text-3xl font-extrabold ${isActive && "text-primaryText "}  ${MouseEnter ? "text-primaryText transition duration-300 font-bold" : ""}`}>{`${songIndex < 10 ? 0 : ""}${songIndex}`}</h1>
                         </div>
                         <div className="flex gap-6 items-center justify-center ">

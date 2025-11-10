@@ -62,7 +62,7 @@ const Browse = () => {
 
                     </div>
                 </div>
-                <div className='col-span-6 grid lg:overflow-y-scroll lg:h-screen px-5 lg:pt-0 md:pt-5 pt-5'>
+                <div className='col-span-6 grid lg:overflow-y-scroll lg:h-screen lg:px-5 px-1 lg:pt-0 md:pt-5 pt-5'>
                     {allSongs.map((eachTrendingSong, index) => <SongPlayCard index={index} eachTrendingSong={eachTrendingSong} ></SongPlayCard>)}
                 </div>
             </div>

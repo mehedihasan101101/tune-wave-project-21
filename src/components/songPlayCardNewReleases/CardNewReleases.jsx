@@ -4,10 +4,7 @@ import { NavLink, useLocation, useParams } from "react-router";
 import { PiGooglePlayLogo } from "react-icons/pi";
 import getYoutubeSongIdFromLink from "../../utilities/getYoutubeSongIdFromLink";
 
-
-
-const Trending15Card = ({ eachTrendingSong, index, routeLink, categoryName }) => {
-
+const CardNewReleases = ({ eachTrendingSong, routeLink, categoryName }) => {
     const { category } = useParams();
 
     // Route path used for the SongPlay card component. 
@@ -20,7 +17,7 @@ const Trending15Card = ({ eachTrendingSong, index, routeLink, categoryName }) =>
 
     const { title, artist, duration, coverImage } = eachTrendingSong;
     // Since array indexes start at 0, adding 1 ensures the count begins from 1.
-    const songIndex = index + 1;
+
 
     //state to handle hover effect of each music card
     const [MouseEnter, setMouseEnter] = useState(false)
@@ -36,20 +33,17 @@ const Trending15Card = ({ eachTrendingSong, index, routeLink, categoryName }) =>
     function MouseLeaveHover() {
         setMouseEnter(false)
     }
-
     return (
-
-
-
-        <NavLink state={categoryName} to={`/home/${pathname === "/Home" ? routeLink : category}/${songId}`} onMouseEnter={MouseEnterHover} onMouseLeave={MouseLeaveHover} className={`border-b border-gray-600/40 py-3`}>
+        // Controls Embla slider responsiveness across different device sizes. now for large Devices 4 slides medium  3 small 1
+        <NavLink className={`shrink-0 grow-0 lg:basis-[25%] px-3 md:basis-[50%] basis-full md:basis min-w-0 `} state={categoryName} to={`/home/${pathname === "/Home" ? routeLink : category}/${songId}`} onMouseEnter={MouseEnterHover} onMouseLeave={MouseLeaveHover} >
 
             {({ isActive }) => (
 
-                <div className='flex justify-between items-center'>
+                <div className='flex justify-between items-center  '>
                     <div className={`flex ${category ? "lg:gap-0" : "lg:gap-2"} md:gap-5 gap-7 items-center `}>
-                        <div className='flex w-10 lg:w-20'>
+                        {/* <div className='flex w-10 lg:w-20'>
                             <h1 className={`${category ? "lg:text-2xl" : "lg:text-5xl"} text-3xl font-extrabold ${isActive && "text-primaryText "}  ${MouseEnter ? "text-primaryText transition duration-300 font-bold" : ""}`}>{`${songIndex < 10 ? 0 : ""}${songIndex}`}</h1>
-                        </div>
+                        </div> */}
                         <div className="flex gap-6 items-center justify-center ">
                             <div className="relative">
                                 <img className='lg:w-14 lg:h-13  w-13 h-12  rounded ' src={coverImage} alt="" />
@@ -75,9 +69,7 @@ const Trending15Card = ({ eachTrendingSong, index, routeLink, categoryName }) =>
 
         </NavLink >
 
-
-
     );
 };
 
-export default Trending15Card;
+export default CardNewReleases;

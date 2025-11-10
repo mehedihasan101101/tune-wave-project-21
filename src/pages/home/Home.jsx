@@ -20,7 +20,7 @@ const Home = () => {
             <section className="container m-auto px-3">
                 <Trending15 trending15={trending15}></Trending15>
             </section>
-            <section className="container m-auto px-3">
+            <section className="container m-auto pt-5">
                 <NewReleases allNewReleases={allNewReleases} ></NewReleases>
             </section>
 

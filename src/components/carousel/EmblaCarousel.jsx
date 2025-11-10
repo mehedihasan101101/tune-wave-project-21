@@ -28,7 +28,7 @@ export function EmblaCarousel({ children }) {
         <>
             <div className=' relative  '>
 
-                <div className="overflow-hidden lg:w-full md:w-[93%] m-auto relative" ref={emblaRef}>
+                <div className="overflow-hidden lg:w-full w-[93%] m-auto relative" ref={emblaRef}>
                     <div className="flex ">
                         {children}
                     </div>

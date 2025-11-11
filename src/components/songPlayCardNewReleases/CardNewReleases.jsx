@@ -35,7 +35,7 @@ const CardNewReleases = ({ eachTrendingSong, routeLink, categoryName }) => {
     }
     return (
         // Controls Embla slider responsiveness across different device sizes. now for large Devices 4 slides medium  3 small 1
-        <NavLink className={`shrink-0 grow-0 lg:basis-[25%] md:px-3 md:basis-[50%] basis-full md:basis min-w-0 `} state={categoryName} to={`/home/${pathname === "/Home" ? routeLink : category}/${songId}`} onMouseEnter={MouseEnterHover} onMouseLeave={MouseLeaveHover} >
+        <NavLink className={`shrink-0 grow-0 lg:basis-[25%] md:px-3 md:basis-[50%] basis-full md:basis min-w-0 `} state={categoryName} to={`/home/${pathname === "/home" ? routeLink : category}/${songId}`} onMouseEnter={MouseEnterHover} onMouseLeave={MouseLeaveHover} >
 
             {({ isActive }) => (
 

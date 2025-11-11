@@ -4,9 +4,12 @@ const PrimaryContext = createContext(null);
 
 const Context = ({ children }) => {
     const [currentCategory, setCurrentCategoryName] = useState("");
+
+    const albumFirstSongId = "";
     const value = {
         setCurrentCategoryName,
-        currentCategory
+        currentCategory,
+        albumFirstSongId
     }
     return (
         <>

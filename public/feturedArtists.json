@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Linkin Park",
+        "coverImage": "/img/linkin-park-band-logo.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Cigarettes After Sex",
+        "coverImage": "/img/ImgHero.webp"
+    },
+    {
+        "id": 3,
+        "name": "Of Monsters and Men",
+        "coverImage": "/img/ofMonster.webp"
+    },
+    {
+        "id": 4,
+        "name": "Blue October",
+        "coverImage":"/img/blue.jpg"
+    },
+    {
+        "id": 5,
+        "name": "deadmau5",
+        "coverImage": "/img/daudkim.webp"
+    },
+    {
+        "id": 6,
+        "name": "Hozier",
+        "coverImage":"/img/hozier.jpg"
+    }
+]

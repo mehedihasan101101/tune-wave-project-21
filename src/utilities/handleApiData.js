@@ -3,9 +3,9 @@
 export default async function ({ params }) {
 
     const songsApiPath = "/songs.json"
-    const { category } = params;
+    const { category, singer } = params;
 
-    console.log(category)
+    console.log(category, singer)
 
     try {
 
@@ -21,6 +21,10 @@ export default async function ({ params }) {
         else if (category && category == "newReleases") {
             const newReleases = songs.filter(eachSong => eachSong.isNewRelease);
             return newReleases;
+        }
+        else if (category && category == "featureArtist") {
+            const thisArtistMusics = songs.filter(eachSong => eachSong.artist.split(" ").join("") == singer);
+            return thisArtistMusics
         }
         else {
             return allSongs

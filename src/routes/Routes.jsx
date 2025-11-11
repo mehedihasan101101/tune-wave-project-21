@@ -14,7 +14,7 @@ const Routes = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Navigate to={"Home"}></Navigate>
+                element: <Navigate to={"home"} replace={true}></Navigate>
             },
 
             {
@@ -27,6 +27,18 @@ const Routes = createBrowserRouter([
                 loader: handleApiData,
                 element: <Browse></Browse>,
                 children: [
+                    {
+                        path: ":songId",
+                        element: <YoutubePlayer></YoutubePlayer>
+                    }
+                ]
+            },
+            {
+                path: "home/album/:category/:singer",
+                loader: handleApiData,
+                element: <Browse></Browse>,
+                children: [
+
                     {
                         path: ":songId",
                         element: <YoutubePlayer></YoutubePlayer>

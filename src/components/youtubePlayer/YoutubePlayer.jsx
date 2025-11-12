@@ -17,7 +17,7 @@ const YoutubePlayer = () => {
         }
     };
     return (
-        <div className="w-full   overflow-hidden rounded-xl  border border-white h-[280px] md:h-[350px] lg:h-[40%]">
+        <div className="w-full   overflow-hidden rounded-xl  border border-white h-[280px] md:h-[350px] lg:h-[60%]">
             <YouTube className="h-full  w-full bg-black" videoId={songId} opts={options}></YouTube>
         </div>
 

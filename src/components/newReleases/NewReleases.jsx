@@ -1,7 +1,5 @@
 
-import { useContext } from "react";
 import CardNewReleases from "./../songPlayCardNewReleases/CardNewReleases"
-import { PrimaryContext } from "../../context/Context";
 import { EmblaCarousel } from "../carousel/EmblaCarousel";
 
 const Trending15 = ({ allNewReleases }) => {
@@ -9,12 +7,9 @@ const Trending15 = ({ allNewReleases }) => {
     // Route path used for the SongPlay card component. 
     // Purpose: allows reusing the same card across different music albums or categories.
 
-    const routeLink = "newReleases";
-    const categoryName = "New Releases"
+    const routeLink = "new-releases";
 
-    const { setCurrentCategoryName } = useContext(PrimaryContext);
-
-    setCurrentCategoryName(categoryName)
+ 
 
     return (
         <div className="space-y-3 py-3">
@@ -23,7 +18,7 @@ const Trending15 = ({ allNewReleases }) => {
             <div className="py-3">
                 <EmblaCarousel>
 
-                    {allNewReleases.map((eachTrendingSong) => <CardNewReleases key={eachTrendingSong.id} routeLink={routeLink} eachTrendingSong={eachTrendingSong} categoryName={categoryName}></CardNewReleases>)}
+                    {allNewReleases.map((eachTrendingSong) => <CardNewReleases key={eachTrendingSong.id} routeLink={routeLink} eachTrendingSong={eachTrendingSong} ></CardNewReleases>)}
 
                 </EmblaCarousel>
 

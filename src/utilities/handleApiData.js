@@ -18,11 +18,11 @@ export default async function ({ params }) {
             const trendingMusics = songs.filter(eachSong => eachSong.isTrending);
             return trendingMusics;
         }
-        else if (category && category == "newReleases") {
+        else if (category && category == "new-releases") {
             const newReleases = songs.filter(eachSong => eachSong.isNewRelease);
             return newReleases;
         }
-        else if (category && category == "featureArtist") {
+        else if (category && category == "featured-artists") {
             const thisArtistMusics = songs.filter(eachSong => eachSong.artist.split(" ").join("") == singer);
             return thisArtistMusics
         }

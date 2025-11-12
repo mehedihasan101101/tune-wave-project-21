@@ -1,0 +1,34 @@
+{
+    "genres": [
+        {
+            "genre": "Rock",
+            "id": "lp001",
+            "coverImage": "https://i.ytimg.com/vi/eVTXPUF4Oz4/maxresdefault.jpg"
+        },
+        {
+            "genre": "Ambient",
+            "id": "cas001",
+            "coverImage": "https://i.ytimg.com/vi/sElE_BfQ67s/maxresdefault.jpg"
+        },
+        {
+            "genre": "Indie",
+            "id": "omm001",
+            "coverImage": "https://i.ytimg.com/vi/ghb6eDopW8I/maxresdefault.jpg"
+        },
+        {
+            "genre": "Alternative",
+            "id": "bm001",
+            "coverImage": "https://i.ytimg.com/vi/FcvXr-9XtgA/maxresdefault.jpg"
+        },
+        {
+            "genre": "Electronic",
+            "id": "edm001",
+            "coverImage": "https://i.ytimg.com/vi/tvlH7lAcwaA/maxresdefault.jpg"
+        },
+        {
+            "genre": "Soul",
+            "id": "rb001",
+            "coverImage": "https://i.ytimg.com/vi/PVjiKRfKpPI/maxresdefault.jpg"
+        }
+    ]
+}

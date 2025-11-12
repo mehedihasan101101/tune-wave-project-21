@@ -13,7 +13,7 @@ const FeaturedArtists = () => {
             .catch((err) => console.error("Error loading data:", err));
     }, [])
 
-
+    const routeLink = "featured-artists";
     return (
         <>
             <div className="space-y-5 pt-5">
@@ -22,7 +22,7 @@ const FeaturedArtists = () => {
                 <div className="">
                     <EmblaCarousel>
                         {
-                            artists.map((eachArtist) => <FeaturedArtCard eachArtist={eachArtist}></FeaturedArtCard>)
+                            artists.map((eachArtist) => <FeaturedArtCard eachArtist={eachArtist} routeLink={routeLink}></FeaturedArtCard>)
                         }
 
                     </EmblaCarousel>

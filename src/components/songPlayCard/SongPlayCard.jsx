@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { FaRegHeart } from "react-icons/fa6";
-import { NavLink, useLocation, useParams } from "react-router";
+import { NavLink, useParams } from "react-router";
 import { PiGooglePlayLogo } from "react-icons/pi";
 import getYoutubeSongIdFromLink from "../../utilities/getYoutubeSongIdFromLink";
 
 
 
-const Trending15Card = ({ eachTrendingSong, index, routeLink, categoryName }) => {
+const Trending15Card = ({ eachTrendingSong, index, routeLink }) => {
 
     const { category, singer } = useParams();
 
@@ -14,9 +14,8 @@ const Trending15Card = ({ eachTrendingSong, index, routeLink, categoryName }) =>
     // Purpose: allows reusing the same card across different music albums or categories.
     const songId = getYoutubeSongIdFromLink(eachTrendingSong.youtubeLink);
 
-    const { pathname } = useLocation();
 
-    console.log(category)
+
 
     const { title, artist, duration, coverImage } = eachTrendingSong;
     // Since array indexes start at 0, adding 1 ensures the count begins from 1.
@@ -41,7 +40,7 @@ const Trending15Card = ({ eachTrendingSong, index, routeLink, categoryName }) =>
 
 
 
-        <NavLink state={categoryName} to={`/home/${category == "featureArtist" ? "album/" : ""}${pathname === "/home" ? routeLink : category}${category == "featureArtist" ? `/${singer}` : ""}/${songId}`} onMouseEnter={MouseEnterHover} onMouseLeave={MouseLeaveHover} className={`border-b border-gray-600/40 py-3`}>
+        <NavLink to={`/home/${category == "featured-artists" ? "album/" : ""}${category ? category : routeLink}${category == "featured-artists" ? `/${singer}` : ""}/${songId}`} onMouseEnter={MouseEnterHover} onMouseLeave={MouseLeaveHover} className={`border-b border-gray-600/40 py-3`}>
 
             {({ isActive }) => (
 

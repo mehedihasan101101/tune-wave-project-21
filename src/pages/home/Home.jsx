@@ -3,6 +3,7 @@ import HeroSection from "../../components/herosection/HeroSection";
 import Trending15 from "../../components/top-15/Trending15";
 import NewReleases from "../../components/newReleases/NewReleases";
 import FeaturedArtists from "../../components/featuredArtists/FeaturedArtists";
+import TopGenres from "../../components/topGenres/TopGenres";
 
 
 const Home = () => {
@@ -28,9 +29,14 @@ const Home = () => {
             <section className="container m-auto pt-5">
                 <NewReleases allNewReleases={allNewReleases} ></NewReleases>
             </section>
+            <section className="container m-auto px-3">
+
+                <TopGenres></TopGenres>
+            </section>
             <section className="container m-auto">
                 <FeaturedArtists></FeaturedArtists>
             </section>
+
 
         </>
 

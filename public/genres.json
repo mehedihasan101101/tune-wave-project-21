@@ -1,34 +1,32 @@
-{
-    "genres": [
-        {
-            "genre": "Rock",
-            "id": "lp001",
-            "coverImage": "https://i.ytimg.com/vi/eVTXPUF4Oz4/maxresdefault.jpg"
-        },
-        {
-            "genre": "Ambient",
-            "id": "cas001",
-            "coverImage": "https://i.ytimg.com/vi/sElE_BfQ67s/maxresdefault.jpg"
-        },
-        {
-            "genre": "Indie",
-            "id": "omm001",
-            "coverImage": "https://i.ytimg.com/vi/ghb6eDopW8I/maxresdefault.jpg"
-        },
-        {
-            "genre": "Alternative",
-            "id": "bm001",
-            "coverImage": "https://i.ytimg.com/vi/FcvXr-9XtgA/maxresdefault.jpg"
-        },
-        {
-            "genre": "Electronic",
-            "id": "edm001",
-            "coverImage": "https://i.ytimg.com/vi/tvlH7lAcwaA/maxresdefault.jpg"
-        },
-        {
-            "genre": "Soul",
-            "id": "rb001",
-            "coverImage": "https://i.ytimg.com/vi/PVjiKRfKpPI/maxresdefault.jpg"
-        }
-    ]
-}
+[
+    {
+        "genre": "Rock",
+        "id": "lp001",
+        "coverImage": "/img/rockGenre.jpg"
+    },
+    {
+        "genre": "Ambient",
+        "id": "cas001",
+        "coverImage": "/img/ambient.jpg"
+    },
+    {
+        "genre": "Indie",
+        "id": "omm001",
+        "coverImage": "/img/indie.webp"
+    },
+    {
+        "genre": "Alternative",
+        "id": "bm001",
+        "coverImage": "/img/alter.jpg"
+    },
+    {
+        "genre": "Electronic",
+        "id": "edm001",
+        "coverImage": "/img/elec.jpeg"
+    },
+    {
+        "genre": "Soul",
+        "id": "rb001",
+        "coverImage": "/img/soul.jpg"
+    }
+]

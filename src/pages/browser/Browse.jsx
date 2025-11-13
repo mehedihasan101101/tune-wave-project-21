@@ -38,12 +38,14 @@ const Browse = () => {
 
 
     return (
-        <>
-            <div className='container  m-auto px-3 py-5'>
+        <div className='container m-auto px-3 lg:pb-20'>
+
+            <div className='container m-auto px-3 py-5'>
                 {/* Here category param transformed into title */}
-                <h2 className="text-xl font-bold text-primaryText">{category.split("-").map((word)=>word[0].toUpperCase()+word.slice(1)).join(" ")}</h2>
+                <h2 className="text-xl font-bold text-primaryText">{category.split("-").map((word) => word[0].toUpperCase() + word.slice(1)).join(" ")}</h2>
+
             </div>
-            <div className='container grid-cols-12 m-auto px-3 lg:grid gap-10 '>
+            <div className=' grid-cols-12  lg:grid gap-10 '>
                 <div className='col-span-6 '>
                     <Outlet context={songId}></Outlet>
                     {currentSong && (<div className='md:grid flex  grid-cols-7 items-center gap-5 mt-5  md:p-2 rounded  '>
@@ -74,7 +76,7 @@ const Browse = () => {
                     {allSongs.map((eachTrendingSong, index) => <SongPlayCard index={index} eachTrendingSong={eachTrendingSong} ></SongPlayCard>)}
                 </div>
             </div>
-        </>
+        </div>
 
 
 

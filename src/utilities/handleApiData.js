@@ -14,7 +14,7 @@ export default async function ({ params }) {
         const { songs } = allSongs;
 
 
-        if (category && category == "trending") {
+        if (category && category == "trending-top-15") {
             const trendingMusics = songs.filter(eachSong => eachSong.isTrending);
             return trendingMusics;
         }
@@ -22,8 +22,12 @@ export default async function ({ params }) {
             const newReleases = songs.filter(eachSong => eachSong.isNewRelease);
             return newReleases;
         }
-        else if (category && category == "featured-artists") {
+        else if (category && category == "featured-artist") {
             const thisArtistMusics = songs.filter(eachSong => eachSong.artist.split(" ").join("") == singer);
+            return thisArtistMusics
+        }
+        else if (category && category == "top-genre") {
+            const thisArtistMusics = songs.filter(eachSong => eachSong.genre.split(" ").join("") == singer);
             return thisArtistMusics
         }
         else {

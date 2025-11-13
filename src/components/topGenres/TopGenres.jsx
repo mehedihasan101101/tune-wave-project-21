@@ -11,6 +11,7 @@ const TopGenres = () => {
             .catch((err) => console.error("Error loading data:", err));
     }, [])
 
+    const routeLink = "top-genre"
 
     return (
         <>
@@ -20,7 +21,7 @@ const TopGenres = () => {
                 </div>
                 <div className="grid  grid-cols-12 gap-2">
                     {
-                        genres.map((eachGenre, index) => <CardGenre eachGenre={eachGenre} index={index}></CardGenre>)
+                        genres.map((eachGenre, index) => <CardGenre eachGenre={eachGenre} index={index} routeLink={routeLink}></CardGenre>)
                     }
                 </div>
             </div>

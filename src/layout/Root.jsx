@@ -7,11 +7,14 @@ const Root = () => {
         <div>
             <>
                 <Nav></Nav>
-                <main className="bg-mainBg min-h-screen">
+                <main className="bg-mainBg min-h-[70vh]">
                     <Outlet></Outlet>
                 </main>
+                <footer className="bg-mainBg mt-10 ">
 
-                <Footer></Footer>
+                    <Footer></Footer>
+
+                </footer>
             </>
 
         </div>

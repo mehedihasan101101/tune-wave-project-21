@@ -13,7 +13,7 @@ const FeaturedArtists = () => {
             .catch((err) => console.error("Error loading data:", err));
     }, [])
 
-    const routeLink = "featured-artists";
+    const routeLink = "featured-artist";
     return (
         <>
             <div className="space-y-5 pt-5">

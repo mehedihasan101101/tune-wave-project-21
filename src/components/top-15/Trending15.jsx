@@ -7,7 +7,7 @@ const Trending15 = ({ trending15 }) => {
     // Route path used for the SongPlay card component. 
     // Purpose: allows reusing the same card across different music albums or categories.
 
-    const routeLink = "trending";
+    const routeLink = "trending-top-15";
 
     return (
         <div className="space-y-3">

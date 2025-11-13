@@ -40,7 +40,7 @@ const Trending15Card = ({ eachTrendingSong, index, routeLink }) => {
 
 
 
-        <NavLink to={`/home/${category == "featured-artists" ? "album/" : ""}${category ? category : routeLink}${category == "featured-artists" ? `/${singer}` : ""}/${songId}`} onMouseEnter={MouseEnterHover} onMouseLeave={MouseLeaveHover} className={`border-b border-gray-600/40 py-3`}>
+        <NavLink to={`/home/${category == "featured-artist" || category =="top-genre"? "album/" : ""}${category ? category : routeLink}${category == "featured-artist" ||category == "top-genre" ? `/${singer}` : ""}/${songId}`} onMouseEnter={MouseEnterHover} onMouseLeave={MouseLeaveHover} className={`border-b border-gray-600/40 py-3`}>
 
             {({ isActive }) => (
 

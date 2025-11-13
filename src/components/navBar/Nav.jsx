@@ -3,6 +3,8 @@ import { AiOutlineThunderbolt } from "react-icons/ai";
 import { FaStream } from "react-icons/fa";
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
+import { CiUser } from "react-icons/ci";
+
 
 
 
@@ -58,26 +60,23 @@ const NavBar = () => {
                 </div>
 
 
-                {/* Add to Cart button */}
+                {/* user button */}
                 <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                            <img
-                                alt="Tailwind CSS Navbar component"
-                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                        </div>
+                    <div tabIndex={0} role="button" className="">
+                        <div className="border border-white px-1 py-1 rounded hover:text-primaryText hover:border-primaryText"><CiUser className=" text-xl "></CiUser> </div>
                     </div>
                     <ul
                         tabIndex="-1"
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li>
+                        className="menu menu-sm dropdown-content   bg-mainBg rounded-box z-1 mt-2 -ml-44 mr-3 w-52 p-2 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+                        <li className="hover:text-primaryText">
                             <a className="justify-between">
-                                Profile
-                                <span className="badge">New</span>
+                                Dashboard
+                                <span className="badge bg-primaryText border-0">New</span>
                             </a>
                         </li>
-                        <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
+                        <li className="hover:text-primaryText"><Link to={"signUp"}>Sign Up</Link></li>
+                        <li className="hover:text-primaryText"><Link>Sign In</Link></li>
+
                     </ul>
                 </div>
 

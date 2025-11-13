@@ -4,6 +4,7 @@ import Home from "../pages/home/Home";
 import handleApiData from "../utilities/handleApiData";
 import Browse from "../pages/browser/Browse";
 import YoutubePlayer from "../components/youtubePlayer/YoutubePlayer";
+import SignUpForm from "../components/signUp/SignUpForm";
 
 
 
@@ -21,6 +22,10 @@ const Routes = createBrowserRouter([
                 path: "home",
                 loader: handleApiData,
                 element: <Home></Home>
+            },
+            {
+                path: "signUp",
+                element: <SignUpForm></SignUpForm>
             },
             {
                 path: "home/:category",

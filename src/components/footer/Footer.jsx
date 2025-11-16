@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="bg-[url(/img/footerImg.png)] min-h-[30vh] relative bg-cover bg-center bg-no-repeat  container m-auto ">
 
                 {/* overlay */}
-                <div className="h-full w-full  bg-linear-to-r from-mainBg via-black/75 to-mainBg absolute top-0">
+                <div className="inset-0  bg-linear-to-r from-mainBg via-black/75 to-mainBg absolute top-0">
 
                 </div>
 

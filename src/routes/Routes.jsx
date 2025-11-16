@@ -4,7 +4,11 @@ import Home from "../pages/home/Home";
 import handleApiData from "../utilities/handleApiData";
 import Browse from "../pages/browser/Browse";
 import YoutubePlayer from "../components/youtubePlayer/YoutubePlayer";
-import SignUpForm from "../components/signUp/SignUpForm";
+import SignUpForm from "../pages/signUp/SignUpForm";
+import SignIn from "../pages/signIn/SignIn";
+import RecoverAcc from "../pages/recoverAccount/RecoverAcc";
+import Dashboard from "../pages/dashboard/Dashboard";
+
 
 
 
@@ -27,6 +31,19 @@ const Routes = createBrowserRouter([
                 path: "signUp",
                 element: <SignUpForm></SignUpForm>
             },
+            {
+                path: "signIn",
+                element: <SignIn></SignIn>
+            },
+            {
+                path: "recovery",
+                element: <RecoverAcc></RecoverAcc>
+            },
+            {
+                path: "dashboard",
+                element: <Dashboard></Dashboard>
+            },
+
             {
                 path: "home/:category",
                 loader: handleApiData,

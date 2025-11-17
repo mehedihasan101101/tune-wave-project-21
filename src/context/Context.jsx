@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.init";
 
@@ -30,7 +30,7 @@ const Context = ({ children }) => {
                 unsubscribe()
             }
         })
-    }, [])
+    }, [user])
     // SignUp
     function createNewUser(email, password) {
         setSimpleLoading(true)
@@ -59,7 +59,10 @@ const Context = ({ children }) => {
         return sendPasswordResetEmail(auth, email);
     }
 
-
+    //verify userAccount
+    function verifyUserEmail() {
+        return sendEmailVerification(auth.currentUser)
+    }
 
     const value = {
         loading, setLoading,
@@ -69,7 +72,8 @@ const Context = ({ children }) => {
         signInUser,
         SignOut,
         recoverUserAcc,
-        simpleLoading, setSimpleLoading
+        simpleLoading, setSimpleLoading,
+        verifyUserEmail
     }
     return (
         <>

@@ -25,14 +25,10 @@ const Browse = () => {
 
             nevigate(firstSongId, { replace: true });
         }
-    }, [])
+    },[])
 
 
 
-    console.log(songId);
-
-
-    console.log(allSongs)
     const currentSong = UseSongById(allSongs) //this custom hook find the current played song 
 
 

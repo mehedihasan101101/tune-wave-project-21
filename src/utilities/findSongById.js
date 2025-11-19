@@ -15,7 +15,6 @@ export default function UseSongById(songs) {
         const songUrl = song.youtubeLink;
         const currentSongId = getYoutubeSongIdFromLink(songUrl)
 
-        console.log(songId, currentSongId ,songUrl)
 
         if (currentSongId == songId) {
             return song;

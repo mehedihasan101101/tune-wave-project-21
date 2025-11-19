@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from "react-router";
+import { createBrowserRouter, Navigate} from "react-router";
 import Root from "../layout/Root"
 import Home from "../pages/home/Home";
 import handleApiData from "../utilities/handleApiData";
@@ -8,6 +8,7 @@ import SignUpForm from "../pages/signUp/SignUpForm";
 import SignIn from "../pages/signIn/SignIn";
 import RecoverAcc from "../pages/recoverAccount/RecoverAcc";
 import Dashboard from "../pages/dashboard/Dashboard";
+import SaveList from "../components/saveList/SaveList";
 
 
 
@@ -41,7 +42,17 @@ const Routes = createBrowserRouter([
             },
             {
                 path: "dashboard",
-                element: <Dashboard></Dashboard>
+                element: <Dashboard></Dashboard>,
+                children: [
+
+                    {
+                        index: true,
+                        element: <Navigate to={"favorite"} replace={true} ></Navigate >
+                    },
+                    {
+                        path: "favorite",
+                        element: <SaveList></SaveList>
+                    }]
             },
 
             {

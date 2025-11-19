@@ -8,7 +8,7 @@ const Context = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null);
     const [simpleLoading, setSimpleLoading] = useState(true)
-
+    const [saveSong, setSaveSong] = useState([])
     //user Observer
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
@@ -73,7 +73,8 @@ const Context = ({ children }) => {
         SignOut,
         recoverUserAcc,
         simpleLoading, setSimpleLoading,
-        verifyUserEmail
+        verifyUserEmail,
+        saveSong, setSaveSong
     }
     return (
         <>

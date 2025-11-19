@@ -1,16 +1,18 @@
 import { useContext } from "react";
 import { PrimaryContext } from "../../context/Context";
 import userAvatar from "./../../assets/user.png"
-import { ToastContainer, toast } from 'react-toastify';
+import { Outlet } from "react-router";
+import SaveList from "../../components/saveList/SaveList";
+
 const Dashboard = () => {
-    const { user, verifyUserEmail } = useContext(PrimaryContext);
+    const { user, verifyUserEmail, saveSong } = useContext(PrimaryContext);
 
     function verifyEmail() {
         verifyUserEmail()
             .then(() => {
                 alert("Verification email has been sent to your mail! Check your inbox or spam.");
             })
-            .catch(()=>{
+            .catch(() => {
                 alert("Your verification email is on the way. Look in your inbox or spam. Too many attempts—please wait before retrying.")
             })
     }
@@ -27,12 +29,10 @@ const Dashboard = () => {
                     {!user?.emailVerified && <button onClick={verifyEmail} className="text-primaryText cursor-pointer">Click Verify your Account</button>
                     }                    <button className="text-primaryText cursor-pointer">Update Info</button>
                 </div>
-                <div className="  w-full lg:flex-auto flex-1 lg:h-auto h-full border lg:border-gray-600/20 border-gray-600/50 shadow-[0_3px_10px_rgb(0,0,0,0.2)] ">
-
+                <div className={`${saveSong.length > 8 ? "overflow-y-scroll" :"" } w-full max-h-[60vh]  p-5 lg:flex-auto flex-1 lg:h-auto  border lg:border-gray-600/20 border-gray-600/50 shadow-[0_3px_10px_rgb(0,0,0,0.2)]`}>
+                    <Outlet></Outlet>
                 </div>
             </div>
-            <ToastContainer></ToastContainer>
-
         </div>
     );
 };

@@ -1,11 +1,10 @@
 
 
-export default async function ({ params }) {
+export default async function ({ params}) {
 
     const songsApiPath = "/songs.json"
     const { category, singer } = params;
 
-    console.log(category, singer)
 
     try {
 
@@ -31,11 +30,11 @@ export default async function ({ params }) {
             return thisArtistMusics
         }
         else {
-            return allSongs
+            return songs
         }
     }
     catch (error) {
-        console.error("Failed to fetch news:", error);
+        console.error("Failed to fetch songs:", error);
         return [];
     }
 }

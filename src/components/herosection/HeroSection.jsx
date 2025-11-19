@@ -1,4 +1,5 @@
 
+import { Link } from "react-router";
 import ImgHero from "../../assets/ImgHero.jpg"
 
 const HeroSection = () => {
@@ -21,7 +22,7 @@ const HeroSection = () => {
 
                 <p className="text-SecondaryText">TuneWave is your ultimate music destination. Discover, and enjoy endless tracks from every genre. Whether you’re chasing the latest hits or timeless classics, TuneWave keeps the music going — anytime, anywhere. Join now and let every beat move you.</p>
                 
-                <button className=" btn bg-primaryText border-0 shadow-none hover:shadow-[-2px_-1px_28px_4px_rgba(38,_252,_234,_0.4)] rounded text-black">Listen Now</button>
+                <Link to={"all-songs"}  className=" btn bg-primaryText border-0 shadow-none hover:shadow-[-2px_-1px_28px_4px_rgba(38,_252,_234,_0.4)] rounded text-black">Listen Now</Link>
             </div>
         </div>
     );

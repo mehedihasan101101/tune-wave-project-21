@@ -8,7 +8,6 @@ import LoadingScreen from "../components/loadingScreen/LoadingScreen";
 const Root = () => {
     const { loading } = useContext(PrimaryContext);
     const { pathname } = useLocation()
-    console.log(location)
 
     if (loading) {
         return (

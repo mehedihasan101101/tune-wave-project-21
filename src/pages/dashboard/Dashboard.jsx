@@ -29,7 +29,7 @@ const Dashboard = () => {
                     {!user?.emailVerified && <button onClick={verifyEmail} className="text-primaryText cursor-pointer">Click Verify your Account</button>
                     }                    <button className="text-primaryText cursor-pointer">Update Info</button>
                 </div>
-                <div className={`${saveSong.length > 8 ? "overflow-y-scroll" :"" } w-full max-h-[60vh]  p-5 lg:flex-auto flex-1 lg:h-auto  border lg:border-gray-600/20 border-gray-600/50 shadow-[0_3px_10px_rgb(0,0,0,0.2)]`}>
+                <div className={`overflow-auto w-full max-h-[60vh] h-full p-5 lg:flex-auto flex-1 lg:h-auto  border lg:border-gray-600/20 border-gray-600/50 shadow-[0_3px_10px_rgb(0,0,0,0.2)]`}>
                     <Outlet></Outlet>
                 </div>
             </div>

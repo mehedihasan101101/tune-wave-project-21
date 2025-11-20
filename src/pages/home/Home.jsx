@@ -11,7 +11,7 @@ const Home = () => {
     // Note: This is a frontend-based React app.
     // The API is locally stored and poorly handled as no backend is used.
     // Not recommended for production.
-    const  songs  = useLoaderData();
+    const songs = useLoaderData();
     const trending15 = songs.filter(eachTrendingSong => eachTrendingSong.isTrending);
     const allNewReleases = songs.filter(eachNewRelease => eachNewRelease.isNewRelease)
 
@@ -30,7 +30,6 @@ const Home = () => {
                 <NewReleases allNewReleases={allNewReleases} ></NewReleases>
             </section>
             <section className="container m-auto px-3">
-
                 <TopGenres></TopGenres>
             </section>
             <section className="container m-auto">

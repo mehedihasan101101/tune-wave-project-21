@@ -68,7 +68,7 @@ const Context = ({ children }) => {
         loading, setLoading,
         createNewUser,
         updateUserInfo,
-        user,
+        setUser,user,
         signInUser,
         SignOut,
         recoverUserAcc,

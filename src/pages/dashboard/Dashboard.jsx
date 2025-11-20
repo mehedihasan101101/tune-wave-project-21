@@ -1,11 +1,10 @@
 import { useContext } from "react";
 import { PrimaryContext } from "../../context/Context";
 import userAvatar from "./../../assets/user.png"
-import { Outlet } from "react-router";
-import SaveList from "../../components/saveList/SaveList";
+import { Navigate, Outlet } from "react-router";
 
 const Dashboard = () => {
-    const { user, verifyUserEmail, saveSong } = useContext(PrimaryContext);
+    const { user, verifyUserEmail } = useContext(PrimaryContext);
 
     function verifyEmail() {
         verifyUserEmail()
@@ -15,6 +14,12 @@ const Dashboard = () => {
             .catch(() => {
                 alert("Your verification email is on the way. Look in your inbox or spam. Too many attempts—please wait before retrying.")
             })
+    }
+    if (!user) {
+        return (
+            <Navigate to={"/home"} replace={true} ></Navigate>
+        )
+
     }
     return (
         <div className="container flex flex-col m-auto px-3 min-h-[60vh] mt-10">

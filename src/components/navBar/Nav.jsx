@@ -1,4 +1,4 @@
-import { Link, NavLink, } from "react-router";
+import { Link,  NavLink, } from "react-router";
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { FaStream } from "react-icons/fa";
 import { useContext, useState } from "react";
@@ -19,7 +19,7 @@ const NavBar = () => {
     function handleSignOut() {
         SignOut()
             .then(() => {
-                setLoading(false)
+                setLoading(false);
             })
             .catch(err => {
                 console.log(err)
@@ -40,6 +40,7 @@ const NavBar = () => {
     else {
         document.body.classList.remove("overflow-hidden")
     }
+
     return (
         // Main navigation bar
         <nav className={`lg:py-3 py-2  px-3   flex flex-col items-center bg-navBar`}>

@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { PrimaryContext } from "../../context/Context";
 import userAvatar from "./../../assets/user.png"
-import { Navigate, Outlet } from "react-router";
+import { Link, Navigate, Outlet, useLocation } from "react-router";
 
 const Dashboard = () => {
     const { user, verifyUserEmail } = useContext(PrimaryContext);
-
+    const { pathname } = useLocation();
+    console.log(pathname)
     function verifyEmail() {
         verifyUserEmail()
             .then(() => {
@@ -32,13 +33,13 @@ const Dashboard = () => {
                     <p className="text-primaryText">Email: <span className="text-white">{user?.email}</span></p>
                     <p className="text-primaryText">Account Status:<span className={`${user?.emailVerified ? "text-green-500" : " text-red-500"}`}> {user?.emailVerified ? "Verified " : "Not Verified"}</span></p>
                     {!user?.emailVerified && <button onClick={verifyEmail} className="text-primaryText cursor-pointer">Click Verify your Account</button>
-                    }                    <button className="text-primaryText cursor-pointer">Update Info</button>
+                    }                    <Link to={"info"}><button className="text-primaryText cursor-pointer">Personal Area</button></Link>
                 </div>
-                <div className={`overflow-auto w-full max-h-[60vh] h-full p-5 lg:flex-auto flex-1 lg:h-auto  border lg:border-gray-600/20 border-gray-600/50 shadow-[0_3px_10px_rgb(0,0,0,0.2)]`}>
+                <div className={`${pathname == "/Dashboard/info" ? "" : "overflow-auto max-h-[60vh]"} w-full  h-full p-5 lg:flex-auto flex-1 lg:h-auto  border lg:border-gray-600/20 border-gray-600/50 shadow-[0_3px_10px_rgb(0,0,0,0.2)]`}>
                     <Outlet></Outlet>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate} from "react-router";
+import { createBrowserRouter, Navigate } from "react-router";
 import Root from "../layout/Root"
 import Home from "../pages/home/Home";
 import handleApiData from "../utilities/handleApiData";
@@ -9,6 +9,7 @@ import SignIn from "../pages/signIn/SignIn";
 import RecoverAcc from "../pages/recoverAccount/RecoverAcc";
 import Dashboard from "../pages/dashboard/Dashboard";
 import SaveList from "../components/saveList/SaveList";
+import UpdateInfoForm from "../components/updateInfoForm/UpdateInfoForm";
 
 
 
@@ -52,6 +53,10 @@ const Routes = createBrowserRouter([
                     {
                         path: "favorite",
                         element: <SaveList></SaveList>
+                    },
+                    {
+                        path: "info",
+                        element: <UpdateInfoForm></UpdateInfoForm>
                     }]
             },
 

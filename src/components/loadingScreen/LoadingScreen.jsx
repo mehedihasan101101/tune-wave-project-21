@@ -2,8 +2,8 @@
 
 const LodingScreen = () => {
     return (
- 
-            <span className="loading loading-dots text-primaryText loading-xl"></span>
+
+        <span className="loading loading-dots text-primaryText loading-xl"></span>
 
     );
 };

@@ -2,18 +2,29 @@ import { useContext, useRef, useState } from "react";
 import { PrimaryContext } from "../../context/Context";
 
 const UpdateInfoForm = () => {
+
+
     const { user } = useContext(PrimaryContext);
     const [updateBtnClick, setUpdateButtonClick] = useState(false);
-    const nameRef = useRef(null)
-    // using useRef hook to focus on the input fields after clicking on update btn
+    const nameRef = useRef(null)    // using useRef hook to focus on the input fields after clicking on update btn
 
     console.log(user)
+    // state to handle value of form inputs
+    const [userName, setUserName] = useState(`${user?.displayName}`);
+    const [userEmail, setUserEmail] = useState(`${user?.email}`);
+    const [userImgLink, setUserImgLink] = useState(`${user.photoURL}`)
+
     function updateBtnStateHandler() {
         setUpdateButtonClick(true);
         nameRef.current.focus()
     }
     function cancelBtnStateHandler() {
+        setUserName(user?.displayName);
+        setUserEmail(user?.email)
+        setUserImgLink(user.photoURL)
         setUpdateButtonClick(false);
+
+
     }
 
     function handleUpdateData(e) {
@@ -29,20 +40,20 @@ const UpdateInfoForm = () => {
                 {/* Name Field */}
                 <div>
                     <label className="font-bold text-primaryText">Name</label>
-                    <input ref={nameRef} type="text" name="Name" className={` ${!updateBtnClick ? "pointer-events-none" : "border-b-white"} input  validator focus:outline-none focus:ring-0    focus:border-r-0 focus:border-l-0 focus:border-b-white text-white h-12 border shadow-none text-[17px]  border-b-gray-600 bg-transparent w-full`} required placeholder={`${!updateBtnClick ? user?.displayName : "New Full Name"}`}
+                    <input onChange={(e) => setUserName(e.target.value)} ref={nameRef} type="text" name="Name" value={userName} className={` ${!updateBtnClick ? "pointer-events-none text-gray-400" : "border-b-white text-white validator"} input   focus:outline-none focus:ring-0    focus:border-r-0 focus:border-t-0 focus:border-l-0 focus:border-b-white  h-12 border shadow-none text-[17px]  border-b-gray-600 bg-transparent w-full`} required
                         pattern="[A-Za-z][A-Za-z0-9\- ]*" minLength="3" maxLength="30" title="Only letters, numbers or dash" />
                 </div>
 
                 {/* email */}
                 <div>
                     <label className="font-bold  text-primaryText">Email</label>
-                    <input name="email" className={` ${!updateBtnClick ? "pointer-events-none" : "border-b-white"} input validator focus:outline-none  focus:border-t-0 focus:border-r-0  focus:border-b-white text-white h-12 border shadow-none text-[17px]  border-b-gray-600 bg-transparent w-full`} type="email" required placeholder={`${!updateBtnClick ? user?.email : "New Email Address"}`} />
+                    <input onChange={(e) => setUserEmail(e.target.value)} value={userEmail} name="email" className={` ${!updateBtnClick ? "pointer-events-none text-gray-400" : "border-b-white validator"} input  focus:outline-none  focus:border-t-0 focus:border-r-0  focus:border-b-white  h-12 border shadow-none text-[17px]  border-b-gray-600 bg-transparent w-full`} type="email" required />
                 </div>
 
                 {/* Image URL */}
                 <div>
                     <label className="font-bold text-primaryText">Profile Picture Link</label>
-                    <input name="image" type="url" className={`${!updateBtnClick ? "pointer-events-none" : "border-b-white"} input validator focus:outline-none  focus:border-t-0 focus:border-r-0  focus:border-b-white text-white h-12 border shadow-none text-[17px]  border-b-gray-600 bg-transparent w-full`} placeholder={`${!updateBtnClick ? user?.photoURL : "New Profile Image URL"}`}
+                    <input onChange={(e) => setUserImgLink(e.target.value)} value={userImgLink} name="image" type="url" className={`${!updateBtnClick ? "pointer-events-none text-gray-400" : "border-b-white validator"} input  focus:outline-none  focus:border-t-0 focus:border-r-0  focus:border-b-white  h-12 border shadow-none text-[17px]  border-b-gray-600 bg-transparent w-full`}
                         pattern="^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9-].*[a-zA-Z0-9])?.)+[a-zA-Z].*$"
                         title="Must be valid URL" />
                     <label className="label text-black flex gap-2 "></label>

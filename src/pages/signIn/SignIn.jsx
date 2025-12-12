@@ -57,9 +57,7 @@ const SignIn = () => {
                         <input name="email" className="input validator focus:outline-none focus:ring-0 focus:border-t-0 focus:border-r-0 focus:border-l-0 focus:border-b-gray-600 text-white h-12 border shadow-none text-[17px]  border-b-gray-600 bg-transparent w-full" type="email" required placeholder="mail@site.com" />
                         {/* password */}
                         <label className="font-bold text-primaryText">Password</label>
-                        <input name="password" type="password" className="input validator focus:outline-none focus:ring-0 focus:border-t-0 focus:border-r-0 focus:border-l-0 focus:border-b-gray-600 text-white h-12 border shadow-none text-[17px]  border-b-gray-600 bg-transparent w-full" required placeholder="Password" minLength="8"
-
-                        />
+                        <input name="password" type="password" className="input validator focus:outline-none focus:ring-0 focus:border-t-0 focus:border-r-0 focus:border-l-0 focus:border-b-gray-600 text-white h-12 border shadow-none text-[17px]  border-b-gray-600 bg-transparent w-full" required placeholder="Password" minLength="8" />
 
 
 

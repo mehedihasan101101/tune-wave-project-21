@@ -1,14 +1,14 @@
 import { useContext, useRef, useState } from "react";
 import { PrimaryContext } from "../../context/Context";
 import { EmailAuthProvider } from "firebase/auth";
-import auth from "../../firebase/firebase.init";
 import SimpleLoading from "../simpleLoading/SimpleLoading";
+import { Link } from "react-router";
 
 
 const UpdateInfoForm = () => {
 
 
-    const { user, reAuthenticateUser, updateUserInfo, updateUserEmail, setUser, simpleLoading, setSimpleLoading, } = useContext(PrimaryContext);
+    const { user, reAuthenticateUser, updateUserInfo, simpleLoading, setSimpleLoading, } = useContext(PrimaryContext);
     const [updateBtnClick, setUpdateButtonClick] = useState(false);
     const nameRef = useRef(null)    // using useRef hook to focus on the input fields after clicking on update btn
 
@@ -18,9 +18,10 @@ const UpdateInfoForm = () => {
     const [userImgLink, setUserImgLink] = useState(`${user.photoURL}`);
     const [userPass, setUserPass] = useState("");
 
-    // notifications state
+    // notifications states
     const [errorMsg, setErrorMsg] = useState("");
-    const [successMsg, setSuccesssMsg] = useState("")
+    const [successMsg, setSuccesssMsg] = useState("");
+
     function updateBtnStateHandler() {
         setUpdateButtonClick(true);
         nameRef.current.focus()
@@ -53,8 +54,10 @@ const UpdateInfoForm = () => {
                     }
                     updateUserInfo(userName, userImgLink)
                     setSuccesssMsg("Success!")
-                    setUser(auth.currentUser);
                     setSimpleLoading(false)
+
+                    document.getElementById('my_modal_1').showModal();
+
 
                 }).catch(() => {
                     setErrorMsg("Incorrect password. Please verify and re-enter your password.")
@@ -67,6 +70,7 @@ const UpdateInfoForm = () => {
 
 
     }
+
     return (
         <div className="h-full flex flex-col">
             <h1 className="text-center text-3xl font-bold text-primaryText">Personal Area</h1>
@@ -133,6 +137,17 @@ const UpdateInfoForm = () => {
 
             </form >
 
+            {/* Modal to notify user Data is updated from daisy Ui */}
+            <dialog id="my_modal_1" className="modal">
+                <div className="modal-box bg-mainBg border border-primaryText">
+                    <h3 className="font-bold text-lg text-primaryText">Success !</h3>
+                    <p className="py-4">Your data has been successfully updated.</p>
+                    <div className="flex justify-end">
+                        < button onClick={() => window.location.reload()} className=" btn bg-primaryText border-0 shadow-none hover:shadow-[-2px_-1px_28px_4px_rgba(38,_252,_234,_0.4)] rounded text-black">Reload</button>
+
+                    </div>
+                </div>
+            </dialog>
         </div >
 
     );

@@ -32,7 +32,7 @@ const Dashboard = () => {
                     <p className="text-primaryText mt-3">{user?.displayName}</p>
                     <p className="text-primaryText">Email: <span className="text-white">{user?.email}</span></p>
                     <p className="text-primaryText">Account Status:<span className={`${user?.emailVerified ? "text-green-500" : " text-red-500"}`}> {user?.emailVerified ? "Verified " : "Not Verified"}</span></p>
-                    {!user?.emailVerified && <button onClick={verifyEmail} className="text-primaryText cursor-pointer">Click Verify your Account</button>
+                    {!user?.emailVerified && <button onClick={verifyEmail} className="text-primaryText cursor-pointer">Verify your Account</button>
                     }                    <Link to={"info"}><button className="text-primaryText cursor-pointer">Personal Area</button></Link>
                 </div>
                 <div className={`${pathname == "/Dashboard/info" ? "" : "overflow-auto max-h-[60vh]"} w-full  h-full p-5 lg:flex-auto flex-1 lg:h-auto  border lg:border-gray-600/20 border-gray-600/50 shadow-[0_3px_10px_rgb(0,0,0,0.2)]`}>

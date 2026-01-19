@@ -10,10 +10,10 @@ const Dashboard = () => {
     function verifyEmail() {
         verifyUserEmail()
             .then(() => {
-                alert("Verification email has been sent to your mail! Check your inbox or spam.");
+                document.getElementById('my_modal_2').showModal();
             })
             .catch(() => {
-                alert("Your verification email is on the way. Look in your inbox or spam. Too many attempts—please wait before retrying.")
+                document.getElementById('my_modal_3').showModal();
             })
     }
     if (!user) {
@@ -32,13 +32,38 @@ const Dashboard = () => {
                     <p className="text-primaryText mt-3">{user?.displayName}</p>
                     <p className="text-primaryText">Email: <span className="text-white">{user?.email}</span></p>
                     <p className="text-primaryText">Account Status:<span className={`${user?.emailVerified ? "text-green-500" : " text-red-500"}`}> {user?.emailVerified ? "Verified " : "Not Verified"}</span></p>
-                    {!user?.emailVerified && <button onClick={verifyEmail} className="text-primaryText cursor-pointer">Verify your Account</button>
-                    }                    <Link to={"info"}><button className="text-primaryText cursor-pointer">Personal Area</button></Link>
+                    {!user?.emailVerified && <button onClick={verifyEmail} className="text-primaryText cursor-pointer">Verify your Account</button>}
+                    <Link to={"info"}><button className="text-primaryText cursor-pointer">Personal Area</button></Link>
                 </div>
                 <div className={`${pathname == "/Dashboard/info" ? "" : "overflow-auto max-h-[60vh]"} w-full  h-full p-5 lg:flex-auto flex-1 lg:h-auto  border lg:border-gray-600/20 border-gray-600/50 shadow-[0_3px_10px_rgb(0,0,0,0.2)]`}>
                     <Outlet></Outlet>
                 </div>
             </div>
+            {/* modal to notify verification email sent */}
+            <dialog id="my_modal_2" className="modal">
+                <div className="modal-box bg-mainBg border border-primaryText">
+                    <h3 className="font-bold text-lg text-primaryText">Success!</h3>
+                    <p className="py-4">Verification email has been sent to your mail! Check your inbox or spam.</p>
+                    <div className="modal-action">
+                        <form method="dialog">
+                            <button className="btn bg-primaryText border-0 shadow-none hover:shadow-[-2px_-1px_28px_4px_rgba(38,_252,_234,_0.4)]">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+            {/* modal to notify verification error */}
+
+            <dialog id="my_modal_3" className="modal">
+                <div className="modal-box bg-mainBg border border-primaryText">
+                    <h3 className="font-bold text-lg text-red-500">Error!</h3>
+                    <p className="py-4">Your verification email is on the way. Look in your inbox or spam. Too many attempts—please wait before retrying.</p>
+                    <div className="modal-action">
+                        <form method="dialog">
+                            <button className="btn bg-primaryText border-0 shadow-none hover:shadow-[-2px_-1px_28px_4px_rgba(38,_252,_234,_0.4)]">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
         </div >
     );
 };

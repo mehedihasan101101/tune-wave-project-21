@@ -9,7 +9,9 @@ import SignIn from "../pages/signIn/SignIn";
 import RecoverAcc from "../pages/recoverAccount/RecoverAcc";
 import Dashboard from "../pages/dashboard/Dashboard";
 import SaveList from "../components/saveList/SaveList";
-import UpdateInfoForm from "../components/updateInfoForm/UpdateInfoForm";
+import UpdateInfo from "../components/updateInfoForm/UpdateInfo";
+import UpdateDataForm from "../components/updateInfoForm/UpdateDataForm";
+import ResetPassForm from "../components/updateInfoForm/ResetPassForm";
 
 
 
@@ -56,7 +58,21 @@ const Routes = createBrowserRouter([
                     },
                     {
                         path: "info",
-                        element: <UpdateInfoForm></UpdateInfoForm>
+                        element: <UpdateInfo></UpdateInfo>,
+                        children: [
+                            {
+                                index: true,
+                                element: <Navigate to={"user"} replace={true} ></Navigate >
+                            },
+                            {
+                                path: "user",
+                                element: <UpdateDataForm></UpdateDataForm>
+                            },
+                            {
+                                path: "reset",
+                                element: <ResetPassForm></ResetPassForm>
+                            }
+                        ]
                     }]
             },
 

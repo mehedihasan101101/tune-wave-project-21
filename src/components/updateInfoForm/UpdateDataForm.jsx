@@ -2,12 +2,9 @@ import { useContext, useRef, useState } from "react";
 import { PrimaryContext } from "../../context/Context";
 import { EmailAuthProvider } from "firebase/auth";
 import SimpleLoading from "../simpleLoading/SimpleLoading";
+import { Link } from "react-router";
 
-
-
-const UpdateInfoForm = () => {
-
-
+const UpdateDataForm = () => {
     const { user, reAuthenticateUser, updateUserInfo, simpleLoading, setSimpleLoading, updateUserEmail } = useContext(PrimaryContext);
     const [updateBtnClick, setUpdateButtonClick] = useState(false);
     const nameRef = useRef(null)    // using useRef hook to focus on the input fields after clicking on update btn
@@ -75,8 +72,7 @@ const UpdateInfoForm = () => {
     }
 
     return (
-        <div className="h-full flex flex-col">
-            <h1 className="text-center text-3xl font-bold text-primaryText">Personal Area</h1>
+        <div>
 
             <form onSubmit={handleUpdateData} className="w-full space-y-7">
 
@@ -129,11 +125,13 @@ const UpdateInfoForm = () => {
                     updateBtnClick ?
 
                         <div className="space-x-2">
-
                             <button type="submit" className=" btn bg-primaryText border-0 shadow-none hover:shadow-[-2px_-1px_28px_4px_rgba(38,_252,_234,_0.4)] rounded text-black">Submit{simpleLoading && <SimpleLoading></SimpleLoading>}</button>
                             <button onClick={cancelBtnStateHandler} className=" btn bg-primaryText border-0 shadow-none hover:shadow-[-2px_-1px_28px_4px_rgba(38,_252,_234,_0.4)] rounded text-black">Cancel</button>
                         </div>
-                        : < button onClick={updateBtnStateHandler} className=" btn bg-primaryText border-0 shadow-none hover:shadow-[-2px_-1px_28px_4px_rgba(38,_252,_234,_0.4)] rounded text-black">Update Data</button>
+                        : <div className="flex gap-2">
+                            < button onClick={updateBtnStateHandler} className=" btn bg-primaryText border-0 shadow-none hover:shadow-[-2px_-1px_28px_4px_rgba(38,_252,_234,_0.4)] rounded text-black">Update Data</button>
+                            <Link to={"/Dashboard/info/reset"}>< button className=" btn bg-primaryText border-0 shadow-none hover:shadow-[-2px_-1px_28px_4px_rgba(38,_252,_234,_0.4)] rounded text-black">Change Password</button></Link>
+                        </div>
 
                 }
 
@@ -152,9 +150,8 @@ const UpdateInfoForm = () => {
                     </div>
                 </div>
             </dialog>
-        </div >
-
+        </div>
     );
 };
 
-export default UpdateInfoForm;
+export default UpdateDataForm;

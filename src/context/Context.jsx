@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, reauthenticateWithCredential, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signOut, updateEmail, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, reauthenticateWithCredential, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signOut, updateEmail, updatePassword, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.init";
 
@@ -74,6 +74,10 @@ const Context = ({ children }) => {
     function updateUserEmail(newEmail) {
         return updateEmail(user, newEmail)
     }
+    //Reset Password
+    function resetPassWord(newPass) {
+        return updatePassword(user, newPass)
+    }
 
     const value = {
         loading, setLoading,
@@ -87,7 +91,8 @@ const Context = ({ children }) => {
         verifyUserEmail,
         saveSong, setSaveSong,
         reAuthenticateUser,
-        updateUserEmail
+        updateUserEmail,
+        resetPassWord
     }
     return (
         <>

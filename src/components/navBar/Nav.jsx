@@ -88,10 +88,10 @@ const NavBar = () => {
                         className="menu menu-sm dropdown-content   bg-mainBg rounded-box z-1 mt-2 -ml-44 mr-3 w-52 p-2 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
                         {
                             user && <li className="hover:text-primaryText">
-                                <a className="justify-between">
+                                <Link to={"/Dashboard"} className="justify-between">
                                     Dashboard
                                     <span className="badge bg-primaryText border-0">New</span>
-                                </a>
+                                </Link>
                             </li>
                         }
 

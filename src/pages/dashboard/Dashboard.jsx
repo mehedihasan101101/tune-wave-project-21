@@ -6,7 +6,6 @@ import { Link, Navigate, Outlet, useLocation } from "react-router";
 const Dashboard = () => {
     const { user, verifyUserEmail } = useContext(PrimaryContext);
     const { pathname } = useLocation();
-    console.log(pathname)
     function verifyEmail() {
         verifyUserEmail()
             .then(() => {
@@ -18,7 +17,7 @@ const Dashboard = () => {
     }
     if (!user) {
         return (
-            <Navigate to={"/home"} replace={true} ></Navigate>
+            <Navigate to={"/signIn"} state={{ to: "/Dashboard" }} replace={true} ></Navigate>
         )
 
     }

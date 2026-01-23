@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import { AiOutlineThunderbolt } from "react-icons/ai";
-import { Link, Navigate } from "react-router";
+import { Link, Navigate, useLocation } from "react-router";
 import { PrimaryContext } from "../../context/Context";
 import { useState } from "react";
 import SimpleLoading from "../../components/simpleLoading/SimpleLoading";
 
 const SignIn = () => {
-    const {user, simpleLoading, setSimpleLoading, signInUser } = useContext(PrimaryContext)
+    const location = useLocation();
+ 
+    const { user, simpleLoading, setSimpleLoading, signInUser } = useContext(PrimaryContext)
     const [errorMessage, setErrorMessage] = useState("");
     const [successMsg, setSuccessMsg] = useState("")
 
@@ -31,7 +33,7 @@ const SignIn = () => {
     if (user) {
         return (
             <>
-                <Navigate to={'/'}></Navigate>
+                <Navigate to={`${location.state ? location.state.to : "/"}`}></Navigate>
             </>
         )
     }

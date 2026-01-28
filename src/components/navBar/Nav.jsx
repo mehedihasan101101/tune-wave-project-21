@@ -1,7 +1,7 @@
-import { Link,  NavLink, } from "react-router";
+import { Link, NavLink, } from "react-router";
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { FaStream } from "react-icons/fa";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { TbUserBolt } from "react-icons/tb";
 import { PrimaryContext } from "../../context/Context";
@@ -12,9 +12,24 @@ import userAvatar from "./../../assets/user.png"
 
 const NavBar = () => {
 
+    // closing mobile nav after clicking or touching outside the div
+    const mobileMenuRef = useRef(null)
     // State to handle mobile menu open/close
     const [open, setOpen] = useState(false);
-    const { user, SignOut, setLoading } = useContext(PrimaryContext)
+    useEffect(() => {
+        function handleClickOutSideMenu(event) {
+            if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target))
+                setOpen(false)
+        }
+        document.addEventListener("mousedown", handleClickOutSideMenu);
+        document.addEventListener("touchstart", handleClickOutSideMenu);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutSideMenu);
+            document.removeEventListener("touchstart", handleClickOutSideMenu);
+        };
+    }, [])
+
+    const { user, SignOut, setLoading, footerAnchorRef } = useContext(PrimaryContext)
 
     function handleSignOut() {
         SignOut()
@@ -30,9 +45,10 @@ const NavBar = () => {
     // Navigation fields for the navbar links
     const navFields = [
         { id: 1, path: "home", name: "Home" },
-        { id: 2, path: "about", name: "About Us" },
+        { id: 2, path: "#aboutUsSection", name: "About Us" },
         { id: 3, path: "Dashboard", name: "Dashboard" },
     ]
+    // ref to scroll to about section
 
     if (open) {
         document.body.classList.add("overflow-hidden")
@@ -41,6 +57,12 @@ const NavBar = () => {
         document.body.classList.remove("overflow-hidden")
     }
 
+    //function for anchor button AboutUs in the primary menu
+    function scrollToAboutUs() {
+        footerAnchorRef.current?.scrollIntoView({
+            behavior: "smooth"
+        })
+    }
     return (
         // Main navigation bar
         <nav className={`lg:py-3 py-2  px-3   flex flex-col items-center bg-navBar`}>
@@ -62,13 +84,14 @@ const NavBar = () => {
 
 
                 {/* Navigation Links */}
-                <div className={` ${open ? "left-0" : "left-[-500px]"} duration-700  lg:static lg:block  lg:w-auto lg:h-auto md:w-[30%] w-[45%] top-0 h-screen z-40 bg-navBar lg:shadow-none shadow-xl lg:bg-transparent   absolute `}>
+                <div ref={mobileMenuRef} className={` ${open ? "left-0" : "left-[-500px]"} duration-700  lg:static lg:block  lg:w-auto lg:h-auto md:w-[30%] w-[45%] top-0 h-screen z-40 bg-navBar lg:shadow-none shadow-xl lg:bg-transparent   absolute `}>
                     {/*Closing icon of mobile navbar */}
                     <IoClose onClick={() => setOpen(!open)} className="text-3xl font-normal absolute top-8 left-1 lg:hidden text-white"></IoClose>
                     <ul className="lg:flex relative   gap-7 lg:mt-0 mt-20 lg:bg-transparent text-[#6b6b6f]">
 
-                        {navFields.map((field) => <NavLink key={field.id} to={field.path} className={({ isActive }) => `rounded  px-6 py-2  block ${isActive ? "text-primaryText" :
+                        {navFields.map((field) => field.id == 2 ? <button onClick={scrollToAboutUs} className="rounded  px-6 py-2  block  hover:[text-shadow:0_0_8px_#26fcea,0_0_16px_#26fcea,0_0_24px_#26fcea] transition text-white">About Us</button> : < NavLink onClick={() => setOpen(false)} key={field.id} to={field.path} className={({ isActive }) => `rounded  px-6 py-2  block ${isActive ? "text-primaryText" :
                             " hover:[text-shadow:0_0_8px_#26fcea,0_0_16px_#26fcea,0_0_24px_#26fcea] transition text-white"}`}>{field.name}</NavLink>)}
+
                     </ul>
                 </div>
 

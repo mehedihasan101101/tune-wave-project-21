@@ -1,6 +1,7 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, reauthenticateWithCredential, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signOut, updateEmail, updatePassword, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.init";
+import { useRef } from "react";
 
 const PrimaryContext = createContext(null);
 
@@ -9,6 +10,9 @@ const Context = ({ children }) => {
     const [user, setUser] = useState(null);
     const [simpleLoading, setSimpleLoading] = useState(true)
     const [saveSong, setSaveSong] = useState([])
+
+
+
     //user Observer
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
@@ -78,6 +82,8 @@ const Context = ({ children }) => {
     function resetPassWord(newPass) {
         return updatePassword(user, newPass)
     }
+    //Ref to hold footer to link with the Anchor button(About US) in the primary menu 
+    const footerAnchorRef = useRef();
 
     const value = {
         loading, setLoading,
@@ -92,7 +98,9 @@ const Context = ({ children }) => {
         saveSong, setSaveSong,
         reAuthenticateUser,
         updateUserEmail,
-        resetPassWord
+        resetPassWord,
+        footerAnchorRef
+
     }
     return (
         <>

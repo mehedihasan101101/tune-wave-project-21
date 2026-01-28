@@ -7,7 +7,7 @@ import SimpleLoading from "../../components/simpleLoading/SimpleLoading";
 
 const SignIn = () => {
     const location = useLocation();
- 
+
     const { user, simpleLoading, setSimpleLoading, signInUser } = useContext(PrimaryContext)
     const [errorMessage, setErrorMessage] = useState("");
     const [successMsg, setSuccessMsg] = useState("")
@@ -75,9 +75,9 @@ const SignIn = () => {
                         <p className="text-green-500">{successMsg}</p>
                         <p className="text-red-500">{errorMessage}</p>
                         {/* submit */}
-                        <button className="btn bg-primaryText shadow-none text-black border-none w-full ">
-                            <input className=" " type="submit" value="Sign In" />
-                            {simpleLoading && <SimpleLoading></SimpleLoading>}
+                        <button type="submit" className="btn  bg-primaryText shadow-none text-black border-none w-full ">
+
+                            Sign In {simpleLoading && <SimpleLoading></SimpleLoading>}
                         </button>
 
                     </div>

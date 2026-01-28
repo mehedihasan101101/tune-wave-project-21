@@ -4,13 +4,16 @@ import appleStoreLogo from '../../assets/applelogo.png'
 import { FiPhoneCall } from "react-icons/fi";
 import { SiMinutemailer } from "react-icons/si";
 import { IoLocationSharp } from "react-icons/io5";
+import { PrimaryContext } from '../../context/Context';
+import { useContext } from 'react';
 
 
 
 const Footer = () => {
+    const { footerAnchorRef } = useContext(PrimaryContext)
     return (
         <>
-            <div className="bg-[url(/img/footerImg.png)] min-h-[30vh] relative bg-cover bg-center bg-no-repeat  container m-auto ">
+            <div ref={footerAnchorRef} className="bg-[url(/img/footerImg.png)] min-h-[30vh] relative bg-cover bg-center bg-no-repeat  container m-auto ">
 
                 {/* overlay */}
                 <div className="inset-0  bg-linear-to-r from-mainBg via-black/75 to-mainBg absolute top-0">

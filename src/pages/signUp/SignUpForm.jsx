@@ -87,9 +87,9 @@ const SignUpForm = () => {
                         <p className="text-green-500">{successMsg}</p>
                         <p className="text-red-500">{errorMessage}</p>
                         {/* submit */}
-                        <button className="btn bg-primaryText shadow-none text-black border-none w-full ">
-                            <input className=" " type="submit" value="Sign Up" />
-                            {simpleLoading && <SimpleLoading></SimpleLoading>}
+                        <button type="submit" className="btn bg-primaryText shadow-none text-black border-none w-full ">
+
+                            Sign Up{simpleLoading && <SimpleLoading></SimpleLoading>}
                         </button>
 
                     </div>

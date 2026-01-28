@@ -57,7 +57,7 @@ const NavBar = () => {
         document.body.classList.remove("overflow-hidden")
     }
 
-    //function for anchor button AboutUs in the primary menu
+    // Scrolls to the About Us section from the primary navigation menu
     function scrollToAboutUs() {
         footerAnchorRef.current?.scrollIntoView({
             behavior: "smooth"

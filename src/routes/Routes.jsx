@@ -29,11 +29,12 @@ const Routes = createBrowserRouter([
             {
                 path: "home",
                 loader: handleApiData,
-                element: <Home></Home>
+                element: <Home></Home>,
+                id: "home-page"
             },
             {
                 path: "signUp",
-                element: <SignUpForm></SignUpForm>
+                element: <SignUpForm></SignUpForm>,
             },
             {
                 path: "signIn",
@@ -80,10 +81,12 @@ const Routes = createBrowserRouter([
                 path: "home/:category",
                 loader: handleApiData,
                 element: <Browse></Browse>,
+
                 children: [
                     {
                         path: ":songId",
-                        element: <YoutubePlayer></YoutubePlayer>
+                        element: <YoutubePlayer></YoutubePlayer>,
+                        id: "browser-page"
                     }
                 ]
             },
@@ -91,11 +94,13 @@ const Routes = createBrowserRouter([
                 path: "home/album/:category/:singer",
                 loader: handleApiData,
                 element: <Browse></Browse>,
+                id: "browser-page-2",
                 children: [
 
                     {
                         path: ":songId",
-                        element: <YoutubePlayer></YoutubePlayer>
+                        element: <YoutubePlayer></YoutubePlayer>,
+                        id: "browser-page-3"
                     }
                 ]
             }

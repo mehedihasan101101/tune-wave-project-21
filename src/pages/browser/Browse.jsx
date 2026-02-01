@@ -25,7 +25,7 @@ const Browse = () => {
 
             nevigate(firstSongId, { replace: true });
         }
-    },[])
+    }, [])
 
 
 

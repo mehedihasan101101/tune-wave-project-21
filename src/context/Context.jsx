@@ -19,14 +19,11 @@ const Context = ({ children }) => {
             if (currentUser) {
 
                 setUser(currentUser)
-                setLoading(false)
                 setSimpleLoading(false)
             }
             else {
-                setLoading(false)
-                setSimpleLoading(false)
                 setUser(null)
-
+                setSimpleLoading(false)
             }
 
 

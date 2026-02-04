@@ -1,4 +1,8 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, reauthenticateWithCredential, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signOut, updateEmail, updatePassword, updateProfile } from "firebase/auth";
+import {
+    createUserWithEmailAndPassword, onAuthStateChanged, reauthenticateWithCredential,
+    sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signOut,
+    updateEmail, updatePassword, updateProfile
+} from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.init";
 import { useRef } from "react";
@@ -6,24 +10,27 @@ import { useRef } from "react";
 const PrimaryContext = createContext(null);
 
 const Context = ({ children }) => {
-    const [loading, setLoading] = useState(true);
+
+
+
+    const [loading, setLoading] = useState(true);  //page loading
     const [user, setUser] = useState(null);
-    const [simpleLoading, setSimpleLoading] = useState(true)
+    const [simpleLoading, setSimpleLoading] = useState(false) //task loading
     const [saveSong, setSaveSong] = useState([])
-
-
 
     //user Observer
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             if (currentUser) {
-
                 setUser(currentUser)
                 setSimpleLoading(false)
+                setLoading(false)
             }
             else {
                 setUser(null)
                 setSimpleLoading(false)
+                setLoading(false)
+
             }
 
 
@@ -32,6 +39,7 @@ const Context = ({ children }) => {
             }
         })
     }, [user])
+
     // SignUp
     function createNewUser(email, password) {
         setSimpleLoading(true)

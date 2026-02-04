@@ -4,7 +4,7 @@ import userAvatar from "./../../assets/user.png"
 import { Link, Navigate, Outlet, useLocation } from "react-router";
 
 const Dashboard = () => {
-    const { user, verifyUserEmail } = useContext(PrimaryContext);
+    const { user, verifyUserEmail,taskLOading } = useContext(PrimaryContext);
     const { pathname } = useLocation();
     function verifyEmail() {
         verifyUserEmail()
@@ -15,7 +15,8 @@ const Dashboard = () => {
                 document.getElementById('my_modal_3').showModal();
             })
     }
-    if (!user) {
+    
+    if (!user && !taskLOading ) {
         return (
             <Navigate to={"/signIn"} state={{ to: "/Dashboard" }} replace={true} ></Navigate>
         )
@@ -33,6 +34,7 @@ const Dashboard = () => {
                     <p className="text-primaryText">Account Status:<span className={`${user?.emailVerified ? "text-green-500" : " text-red-500"}`}> {user?.emailVerified ? "Verified " : "Not Verified"}</span></p>
                     {!user?.emailVerified && <button onClick={verifyEmail} className="text-primaryText cursor-pointer">Verify your Account</button>}
                     <Link to={"info"}><button className="text-primaryText cursor-pointer">Personal Area</button></Link>
+                    <Link to={"favorite"}><button className="text-primaryText cursor-pointer">My Library</button></Link>
                 </div>
                 <div className={`${pathname == "/Dashboard/info" ? "" : "overflow-auto max-h-[60vh]"} w-full  h-full p-5 lg:flex-auto flex-1 lg:h-auto  border lg:border-gray-600/20 border-gray-600/50 shadow-[0_3px_10px_rgb(0,0,0,0.2)]`}>
                     <Outlet></Outlet>

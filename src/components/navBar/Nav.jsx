@@ -29,16 +29,16 @@ const NavBar = () => {
         };
     }, [])
 
-    const { user, SignOut, setLoading, footerAnchorRef } = useContext(PrimaryContext)
+    const { user, SignOut, setSimpleLoading, footerAnchorRef } = useContext(PrimaryContext)
 
     function handleSignOut() {
         SignOut()
             .then(() => {
-                setLoading(false);
+                setSimpleLoading(false);
             })
             .catch(err => {
                 console.log(err)
-                setLoading(false)
+                setSimpleLoading(false)
 
             })
     }

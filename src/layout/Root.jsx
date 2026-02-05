@@ -23,7 +23,7 @@ const Root = () => {
     return (
         <>
 
-            <div className={`${loading ? "hidden" : ""}`}>
+            <div>
 
                 <Nav></Nav>
                 <main className={`bg-mainBg ${pathname == "/Dashboard" ? "min-h-[60vh]" : "min-h-[70vh]"} flex flex-col items-center justify-center`}>

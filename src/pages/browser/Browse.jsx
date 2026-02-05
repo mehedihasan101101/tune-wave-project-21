@@ -34,7 +34,7 @@ const Browse = () => {
 
 
     return (
-        <div className='container m-auto px-3 lg:pb-20'>
+        <div className='container m-auto px-3 lg:py-2'>
 
             <div className='container m-auto px-3 py-5'>
                 {/* Here category param transformed into title */}

@@ -59,7 +59,7 @@ const Context = ({ children }) => {
     }
     //Sing Out
     function SignOut() {
-        setSimpleLoading(true)
+        setLoading(true)
         return signOut(auth);
     }
     //Recover PassWord 

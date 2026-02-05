@@ -5,24 +5,30 @@ import { PiGooglePlayLogo } from "react-icons/pi";
 import getYoutubeSongIdFromLink from "../../utilities/getYoutubeSongIdFromLink";
 import { PrimaryContext } from "../../context/Context";
 import { FaHeart } from "react-icons/fa";
+import ReactToast from "../react-toast/ReactToast";
+import ReactToastSuccess from "../react-toast/ReactToastSuccess";
 
 const CardNewReleases = ({ eachTrendingSong, routeLink, categoryName }) => {
     const { category } = useParams();
     // getting favorite song from primary context
-    const { saveSong, setSaveSong } = useContext(PrimaryContext)
+    const { saveSong, setSaveSong, user } = useContext(PrimaryContext)
 
     const songSaveStatus = saveSong.some(eachSaveSong => eachSaveSong.id == eachTrendingSong.id); //check status if the song is already on the favorite list
 
     // this function add song to the favorite list
     function handleSaveSong() {
+        if (!user) {
+            ReactToast()
+            return
+        }
         if (!songSaveStatus) {
             setSaveSong([...saveSong, eachTrendingSong]);
-            console.log(saveSong)
+            ReactToastSuccess()
+            return
         }
         if (songSaveStatus) {
             const removeFromSaveList = saveSong.filter(each => each.id !== eachTrendingSong.id);
             setSaveSong(removeFromSaveList)
-            console.log(saveSong)
         }
     }
     // Route path used for the SongPlay card component. 

@@ -4,6 +4,7 @@ import { Outlet, useLocation } from "react-router";
 import { useContext } from "react";
 import { PrimaryContext } from "../context/Context";
 import LoadingScreen from "../components/loadingScreen/LoadingScreen";
+import { ToastContainer } from 'react-toastify';
 
 const Root = () => {
     const { loading } = useContext(PrimaryContext);
@@ -34,7 +35,16 @@ const Root = () => {
 
                 </footer>
 
-
+                <ToastContainer position="top-right"
+                    autoClose={2000}
+                    newestOnTop={true}
+                    closeOnClick={false}
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme=""
+                    ></ToastContainer>
             </div></>
 
     );

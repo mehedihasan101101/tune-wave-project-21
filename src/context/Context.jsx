@@ -21,23 +21,28 @@ const Context = ({ children }) => {
     //user Observer
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
+
             if (currentUser) {
-                setUser(currentUser)
-                setSimpleLoading(false)
-                setLoading(false)
+                setUser(currentUser);
+                setSimpleLoading(false);
+                    setLoading(false)
+
+
             }
             else {
-                setUser(null)
-                setSimpleLoading(false)
-                setLoading(false)
+                setUser(null);
+                setSimpleLoading(false);
+                    setLoading(false)
+
 
             }
 
 
-            return () => {
-                unsubscribe()
-            }
+
         })
+        return () => {
+            unsubscribe()
+        }
     }, [user])
 
     // SignUp

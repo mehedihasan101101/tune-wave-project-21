@@ -29,7 +29,7 @@ const NavBar = () => {
         };
     }, [])
 
-    const { user, SignOut, setSimpleLoading, footerAnchorRef,setSaveSong } = useContext(PrimaryContext)
+    const { user, SignOut, setSimpleLoading, footerAnchorRef, setSaveSong } = useContext(PrimaryContext)
 
     function handleSignOut() {
         SignOut()
@@ -37,7 +37,7 @@ const NavBar = () => {
                 setSimpleLoading(false);
                 setSaveSong([])
             })
-            .catch( ()=> {
+            .catch(() => {
                 setSimpleLoading(false)
 
             })
@@ -62,6 +62,7 @@ const NavBar = () => {
         footerAnchorRef.current?.scrollIntoView({
             behavior: "smooth"
         })
+        setOpen(false)
     }
     return (
         // Main navigation bar

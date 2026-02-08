@@ -4,7 +4,7 @@ import userAvatar from "./../../assets/user.png"
 import { Link, Navigate, Outlet, useLocation } from "react-router";
 
 const Dashboard = () => {
-    const { user, verifyUserEmail,taskLOading } = useContext(PrimaryContext);
+    const { user, verifyUserEmail, taskLOading } = useContext(PrimaryContext);
     const { pathname } = useLocation();
     function verifyEmail() {
         verifyUserEmail()
@@ -15,15 +15,15 @@ const Dashboard = () => {
                 document.getElementById('my_modal_3').showModal();
             })
     }
-    
-    if (!user && !taskLOading ) {
+
+    if (!user && !taskLOading) {
         return (
             <Navigate to={"/signIn"} state={{ to: "/Dashboard" }} replace={true} ></Navigate>
         )
 
     }
     return (
-        <div className="container flex flex-col m-auto px-3 min-h-[60vh] mt-10">
+        <div className="container flex flex-col m-auto px-3 min-h-[60vh] mb-15 mt-15">
 
             <div className="flex-1 flex lg:flex-row flex-col gap-2">
                 <div className=" lg:w-[40%] w-full flex flex-col items-center lg:py-0 py-5  justify-center space-y-3 border lg:border-gray-600/15 border-gray-600/50 shadow-[0_3px_10px_rgb(0,0,0,0.2)] ">
@@ -36,7 +36,7 @@ const Dashboard = () => {
                     <Link to={"info"}><button className="text-primaryText cursor-pointer">Personal Area</button></Link>
                     <Link to={"favorite"}><button className="text-primaryText cursor-pointer">My Library</button></Link>
                 </div>
-                <div className={`${pathname == "/Dashboard/info" ? "" : "overflow-auto max-h-[60vh]"} w-full  h-full p-5 lg:flex-auto flex-1 lg:h-auto  border lg:border-gray-600/20 border-gray-600/50 shadow-[0_3px_10px_rgb(0,0,0,0.2)]`}>
+                <div className={`${pathname == "/Dashboard/info" ? "" : "overflow-auto max-h-[70vh]"} w-full  h-full p-5 lg:flex-auto flex-1 lg:h-auto  border lg:border-gray-600/20 border-gray-600/50 shadow-[0_3px_10px_rgb(0,0,0,0.2)]`}>
                     <Outlet></Outlet>
                 </div>
             </div>

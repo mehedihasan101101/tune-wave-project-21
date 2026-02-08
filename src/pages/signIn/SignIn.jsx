@@ -38,7 +38,7 @@ const SignIn = () => {
         )
     }
     return (
-        <div className='container  m-auto flex items-center justify-center min-h-[70vh] mt-10'>
+        <div className='container  m-auto flex items-center justify-center min-h-[70vh]'>
             <div className="lg:w-[35%] w-[90%] flex flex-col md:px-13 md:py-10  p-5 rounded items-center justify-center border lg:border-gray-600/15 border-gray-600/50 shadow-[0_3px_10px_rgb(0,0,0,0.2)] ">
                 <div className="flex flex-col items-center  w-full">
                     <Link to={'/'}>

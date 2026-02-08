@@ -26,10 +26,10 @@ const Root = () => {
             <div>
 
                 <Nav></Nav>
-                <main className={`bg-mainBg ${pathname == "/Dashboard" ? "min-h-[60vh]" : "min-h-[70vh]"} flex flex-col items-center justify-center`}>
+                <main className={`bg-mainBg ${pathname == "/Dashboard" ? "min-h-[50vh]" : "min-h-[70vh]"} flex flex-col items-center justify-center`}>
                     <Outlet></Outlet>
                 </main>
-                <footer className="bg-mainBg mt-10">
+                <footer className="bg-mainBg ">
 
                     <Footer></Footer>
 
@@ -44,7 +44,7 @@ const Root = () => {
                     draggable
                     pauseOnHover
                     theme=""
-                    ></ToastContainer>
+                ></ToastContainer>
             </div></>
 
     );

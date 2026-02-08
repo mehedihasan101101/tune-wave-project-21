@@ -16,7 +16,7 @@ const FeaturedArtists = () => {
     const routeLink = "featured-artist";
     return (
         <>
-            <div className="space-y-5 pt-5">
+            <div className="space-y-5 pt-5 pb-10">
                 <h2 className="text-xl pl-3 font-bold text-primaryText">Featured Artists</h2>
 
                 <div className="">

@@ -5,7 +5,6 @@ import NewReleases from "../../components/newReleases/NewReleases";
 import FeaturedArtists from "../../components/featuredArtists/FeaturedArtists";
 import TopGenres from "../../components/topGenres/TopGenres";
 
-
 const Home = () => {
 
     // Note: This is a frontend-based React app.

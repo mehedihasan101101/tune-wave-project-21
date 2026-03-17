@@ -12,17 +12,15 @@ const Root = () => {
 
 
 
-    if (loading) {
-        return (
-            <div className={`h-screen flex  justify-center`}>
-                <LoadingScreen></LoadingScreen>
-            </div>
-        )
-    }
+
 
     return (
         <>
-
+            {loading && (
+                <div className={`h-screen flex  justify-center`}>
+                    <LoadingScreen></LoadingScreen>
+                </div>
+            )}
             <div>
 
                 <Nav></Nav>

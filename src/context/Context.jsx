@@ -20,19 +20,25 @@ const Context = ({ children }) => {
 
     //user Observer
     useEffect(() => {
+        let timer;
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
 
             if (currentUser) {
                 setUser(currentUser);
                 setSimpleLoading(false);
+                timer = setTimeout(() => {
                     setLoading(false)
 
+                }, 500);
 
             }
             else {
                 setUser(null);
                 setSimpleLoading(false);
+                timer = setTimeout(() => {
                     setLoading(false)
+
+                }, 500);
 
 
             }
@@ -42,8 +48,9 @@ const Context = ({ children }) => {
         })
         return () => {
             unsubscribe()
+            clearTimeout(timer)
         }
-    }, [user])
+    }, [])
 
     // SignUp
     function createNewUser(email, password) {

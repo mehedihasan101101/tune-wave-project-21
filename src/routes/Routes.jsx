@@ -21,13 +21,9 @@ const Routes = createBrowserRouter([
         path: "",
         element: <Root></Root>,
         children: [
-            {
-                index: true,
-                element: <Navigate to={"home"} replace={true}></Navigate>
-            },
 
             {
-                path: "home",
+                index: true,
                 loader: handleApiData,
                 element: <Home></Home>,
             },
@@ -50,10 +46,7 @@ const Routes = createBrowserRouter([
 
                     {
                         index: true,
-                        element: <Navigate to={"favorite"} replace={true} ></Navigate >
-                    },
-                    {
-                        path: "favorite",
+                  
                         element: <SaveList></SaveList>
                     },
                     {
@@ -77,7 +70,7 @@ const Routes = createBrowserRouter([
             },
 
             {
-                path: "home/:category",
+                path: "/:category",
                 loader: handleApiData,
                 element: <Browse></Browse>,
 
@@ -89,7 +82,7 @@ const Routes = createBrowserRouter([
                 ]
             },
             {
-                path: "home/album/:category/:singer",
+                path: "/album/:category/:singer",
                 loader: handleApiData,
                 element: <Browse></Browse>,
                 children: [
